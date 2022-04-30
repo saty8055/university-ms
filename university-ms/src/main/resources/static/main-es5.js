@@ -3557,7 +3557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /Users/shadow/Desktop/Sandbox/university-ms/university-ms/src/main/university-ms/src/main.ts */
+    /*! /Users/shadow/Desktop/Sandbox/university-MS/university-ms/src/main/university-ms/src/main.ts */
     "./src/main.ts");
     /***/
   }

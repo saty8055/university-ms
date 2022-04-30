@@ -400,11 +400,11 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /Users/shadow/Desktop/Sandbox/university-ms/university-ms/src/main/university-ms/src/styles.css */
+    /*! /Users/shadow/Desktop/Sandbox/university-MS/university-ms/src/main/university-ms/src/styles.css */
     "./src/styles.css");
 
     module.exports = __webpack_require__(
-    /*! /Users/shadow/Desktop/Sandbox/university-ms/university-ms/src/main/university-ms/node_modules/ngx-toastr/toastr.css */
+    /*! /Users/shadow/Desktop/Sandbox/university-MS/university-ms/src/main/university-ms/node_modules/ngx-toastr/toastr.css */
     "./node_modules/ngx-toastr/toastr.css");
     /***/
   }
