@@ -63,7 +63,7 @@ export class FundRaiserComponent implements OnInit {
       this.api.validateResponse(response, data=>{
         this.funds.push(data);
         this.form.reset();
-        this.bot.success("Funds Added!");
+        this.bot.success("Funds Raiser Added!");
       }, error=>{
         this.bot.fail(error);
       })

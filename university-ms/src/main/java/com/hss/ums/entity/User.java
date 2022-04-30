@@ -49,10 +49,6 @@ public class User extends BaseEntity{
 		return userId;
 	}
 
-	@OneToMany(mappedBy = Library.USER, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JsonIgnoreProperties({Library.HIBERNATE_LAZY_INITIALIZER, Library.HANDLER })
-	@JsonIgnore
-	public List<Booking> bookings;
 
 	public void setUserId(String userId) {
 		this.userId = userId;
@@ -133,14 +129,6 @@ public class User extends BaseEntity{
 
 	public void setDeleted(Boolean deleted) {
 		this.deleted = deleted;
-	}
-
-	public List<Booking> getBookings() {
-		return bookings;
-	}
-
-	public void setBookings(List<Booking> bookings) {
-		this.bookings = bookings;
 	}
 
 	public String getFcmToken() {

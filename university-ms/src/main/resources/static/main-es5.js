@@ -56,26 +56,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html":
-  /*!************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html ***!
-    \************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppDashboardBookingBookingComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n <div class=\"table-responsive\">\n   <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Room No</th>\n                <th class=\"centered\">Class</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">AC</th>\n                <th class=\"centered\">Hotel / Villa</th>\n                <th class=\"centered\">Price</th>\n                <th class=\"centered\">Suite</th>\n                <th class=\"centered\">From </th>\n                <th class=\"centered\">To</th>\n                <th class=\"centered\">Booked At</th>\n                <th class=\"centered\" colspan=\"2\">Status</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of bookings; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.room.roomNumber}}</td>\n                <td>{{record.room.houseClass}}</td>\n                <td>{{record.room.houseName}}</td>\n                <td>{{record.room.isAc ? 'AC' : 'NON_AC'}}</td>\n                <td>{{record.room.isHotel? 'HOTEL' : 'VILLA'}}</td>\n                <td>{{record.room.price| number :'.2-2'}}</td>\n                <td>{{record.room.suiteName}}</td>\n                <td>{{record.bookingFrom | date:'dd/MM/yyyy'}}</td>\n                <td>{{record.bookingTo | date:'dd/MM/yyyy'}}</td>\n                <td>{{record.createdAt | date:'dd/MM/yyyy - hh:mm aa'}}</td>\n                <td *ngIf=\"!record.cancelled\">{{record.cancelled ? 'CANCELLED' : 'ACTIVE'}}</td>\n                <td *ngIf=\"record.cancelled\" colspan=\"2\">{{record.cancelled ? 'CANCELLED' : 'ACTIVE'}}</td>\n                <td *ngIf=\"!record.cancelled\"><button class=\"btn btnPrime\" (click)=\"cancel(record.bookingId)\" *ngIf=\"!record.cancelled\"><span class=\"fa fa-remove\"></span> Cancel</button></td>\n            </tr>\n            <tr *ngIf=\"bookings.length <1 \">\n                <th colspan=\"13\">No Record found</th>\n                </tr>\n        </tbody>\n    </table>\n \n</div>\n\n<app-loader></app-loader>";
-    /***/
-  },
-
-  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html":
   /*!******************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html ***!
@@ -136,26 +116,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html":
-  /*!****************************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html ***!
-    \****************************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppDashboardPaymentHistoryPaymentHistoryComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n <div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n         <thead>\n             <tr>\n                 <th class=\"centered indexCell matchDouble\">#</th>\n                 <th class=\"extendedCell matchDouble\">Transaction ID</th>\n                 <th class=\"centered\">Transaction Amount</th>\n                 <th class=\"centered\">Transaction Time</th>\n                 <th class=\"centered\">Room Number</th>\n             </tr>\n         </thead>\n         <tbody>\n             <tr *ngFor=\"let record of bookings; let i=index;\">\n                 <th>{{i+1}}</th>\n                 <td>{{record.room.bookingId}}</td>\n                 <td>{{record.room.price| number :'.2-2'}}</td>\n                 <td>{{record.createdAt | date:'dd/MM/yyyy - hh:mm aa'}}</td>\n                 <td>{{record.room.roomNumber}}</td>\n             </tr>\n             <tr *ngIf=\"bookings.length <1 \">\n                 <th colspan=\"13\">No Record found</th>\n                 </tr>\n         </tbody>\n     </table>\n  \n </div>\n \n <app-loader></app-loader>";
-    /***/
-  },
-
-  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/profile/profile.component.html":
   /*!************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/profile/profile.component.html ***!
@@ -172,26 +132,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<div class=\"container-fluid\" style=\"padding-top:100px;\">\n    <div class=\"row\">\n        <div class=\"col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-12 col-xs-12\" style=\"overflow: auto;\">\n            <table class=\"dataGrid\" style=\"margin-left: calc(50% - 345px);\">\n                <thead>\n                    <tr>\n                        <th class=\"index\" colspan=\"2\">\n                            Personal Info\n                        </th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <th class=\"index\" style=\"width:150px;\">Name</th>\n                        <td style=\"width: 300px;\">{{user.fullName}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">User Name</th>\n                        <td>{{user.username}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">e-mail</th>\n                        <td>{{user.email}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">Password</th>\n                        <td>\n                            <button class=\"btn\" data-toggle=\"modal\" data-target=\"#changePassword\">change</button>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"changePassword\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Change Password</h4>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"oldPass\" placeholder=\"Current Password\">\n                </div>\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"pass\" placeholder=\"New Password\">\n                </div>\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"cPass\" placeholder=\"Confirm Password\">\n                </div>\n            </div>\n            <div class=\"modal-footer centered\">\n                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"changePassword()\"><span class=\"fa fa-plus-square\"></span> Change Password</button>\n            </div>\n        </div>\n\n    </div>\n</div>\n\n\n\n<app-loader>\n</app-loader>";
-    /***/
-  },
-
-  /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html":
-  /*!******************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html ***!
-    \******************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppDashboardRoomRoomComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><input class=\"form-control\" type=\"date\" [(ngModel)]=\"fromDate\"/></th>\n            <th><input class=\"form-control\" type=\"date\" [(ngModel)]=\"toDate\"/></th>\n            <th><button class=\"btn btnPrime fullCover\" (click)=\"validateAndSearch()\" ><span class=\"fa fa-eye\"></span> Search</button></th>\n        </tr>\n    </thead>\n</table>\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Room No</th>\n                <th class=\"centered\">Class</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">AC</th>\n                <th class=\"centered\">Hotel / Villa</th>\n                <th class=\"centered\">Price</th>\n                <th class=\"centered\" colspan=\"2\">Suite</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of rooms; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.roomNumber}}</td>\n                <td>{{record.houseClass}}</td>\n                <td>{{record.houseName}}</td>\n                <td>{{record.isAc ? 'AC' : 'NON_AC'}}</td>\n                <td>{{record.isHotel? 'HOTEL' : 'VILLA'}}</td>\n                <td>{{record.price| number :'.2-2'}}</td>\n                <td>{{record.suiteName}}</td>\n                <td><button class=\"btn btnPrime\" (click)=\"book(record.roomId)\"><span class=\"fa fa-save\"></span> Book</button></td>\n            </tr>\n            <tr *ngIf=\"rooms.length <1 \">\n                <th colspan=\"9\">No Record found</th>\n                </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<app-loader></app-loader>";
     /***/
   },
 
@@ -975,25 +915,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ./dashboard/room/room.component */
-    "./src/app/dashboard/room/room.component.ts");
-    /* harmony import */
-
-
-    var _register_register_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./register/register.component */
     "./src/app/register/register.component.ts");
     /* harmony import */
 
 
-    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./dashboard/funds/funds.component */
     "./src/app/dashboard/funds/funds.component.ts");
     /* harmony import */
 
 
-    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./dashboard/fund-raiser/fund-raiser.component */
     "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
@@ -1005,13 +939,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         component: _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"]
       }, {
         path: "funds",
-        component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__["FundsComponent"]
+        component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_10__["FundsComponent"]
       }, {
         path: "raiser",
-        component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__["FundRaiserComponent"]
-      }, {
-        path: "room",
-        component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__["RoomComponent"]
+        component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_11__["FundRaiserComponent"]
       }, {
         path: "",
         redirectTo: "/funds",
@@ -1023,7 +954,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     }, {
       path: "register",
-      component: _register_register_component__WEBPACK_IMPORTED_MODULE_10__["RegisterComponent"]
+      component: _register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"]
     }, {
       path: "reset/:token",
       component: _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__["ResetComponent"]
@@ -1244,37 +1175,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
-    /*! ./dashboard/room/room.component */
-    "./src/app/dashboard/room/room.component.ts");
-    /* harmony import */
-
-
-    var _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
-    /*! ./dashboard/booking/booking.component */
-    "./src/app/dashboard/booking/booking.component.ts");
-    /* harmony import */
-
-
-    var _register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ./register/register.component */
     "./src/app/register/register.component.ts");
     /* harmony import */
 
 
-    var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
-    /*! ./dashboard/payment-history/payment-history.component */
-    "./src/app/dashboard/payment-history/payment-history.component.ts");
-    /* harmony import */
-
-
-    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! ./dashboard/funds/funds.component */
     "./src/app/dashboard/funds/funds.component.ts");
     /* harmony import */
 
 
-    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! ./dashboard/fund-raiser/fund-raiser.component */
     "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
@@ -1283,7 +1196,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"], _loader_loader_component__WEBPACK_IMPORTED_MODULE_13__["LoaderComponent"], _f04_f04_component__WEBPACK_IMPORTED_MODULE_14__["F04Component"], _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__["ProfileComponent"], _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__["ResetComponent"], _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__["RoomComponent"], _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__["BookingComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"], _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__["PaymentHistoryComponent"], _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__["FundsComponent"], _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__["FundRaiserComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"], _loader_loader_component__WEBPACK_IMPORTED_MODULE_13__["LoaderComponent"], _f04_f04_component__WEBPACK_IMPORTED_MODULE_14__["F04Component"], _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__["ProfileComponent"], _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__["ResetComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"], _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_19__["FundsComponent"], _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_20__["FundRaiserComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], ng2_tooltip_directive__WEBPACK_IMPORTED_MODULE_11__["TooltipModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_9__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"]],
       providers: [_angular_common__WEBPACK_IMPORTED_MODULE_15__["DatePipe"], {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HTTP_INTERCEPTORS"],
@@ -1292,160 +1205,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })], AppModule);
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/booking/booking.component.css":
-  /*!*********************************************************!*\
-    !*** ./src/app/dashboard/booking/booking.component.css ***!
-    \*********************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppDashboardBookingBookingComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9ib29raW5nL2Jvb2tpbmcuY29tcG9uZW50LmNzcyJ9 */";
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/booking/booking.component.ts":
-  /*!********************************************************!*\
-    !*** ./src/app/dashboard/booking/booking.component.ts ***!
-    \********************************************************/
-
-  /*! exports provided: BookingComponent */
-
-  /***/
-  function srcAppDashboardBookingBookingComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BookingComponent", function () {
-      return BookingComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/loader/loader.component */
-    "./src/app/loader/loader.component.ts");
-    /* harmony import */
-
-
-    var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! src/app/services/api/api.service */
-    "./src/app/services/api/api.service.ts");
-    /* harmony import */
-
-
-    var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! src/app/services/notification-bot/bot.service */
-    "./src/app/services/notification-bot/bot.service.ts");
-
-    var BookingComponent = /*#__PURE__*/function () {
-      function BookingComponent(api, bot) {
-        _classCallCheck(this, BookingComponent);
-
-        this.api = api;
-        this.bot = bot;
-        this.page = {};
-        this.bookings = [];
-        this.pageNumber = 0;
-        this.pageSize = 50;
-        this.sortBy = "bookingFrom";
-        this.sortDirection = "desc";
-      }
-
-      _createClass(BookingComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.load();
-        }
-      }, {
-        key: "load",
-        value: function load() {
-          var _this = this;
-
-          this.loader.load();
-          this.api.listBookings(this.pageNumber, this.pageSize, this.sortBy, this.sortDirection).subscribe(function (response) {
-            _this.loader.resume();
-
-            _this.api.validateResponse(response, function (data) {
-              _this.page.numberOfElements = data.numberOfElements;
-              _this.page.totalPages = data.totalPages;
-              _this.page.totalElements = data.totalElements;
-              _this.bookings = data.content;
-            }, function (error) {
-              _this.bot.fail(error);
-            });
-          });
-        }
-      }, {
-        key: "cancel",
-        value: function cancel(id) {
-          var _this2 = this;
-
-          this.loader.load();
-          this.api.cancel(id).subscribe(function (response) {
-            _this2.loader.resume();
-
-            _this2.api.validateResponse(response, function (data) {
-              _this2.bot.success("Booking Cancelled !");
-
-              _this2.load();
-            }, function (error) {
-              _this2.bot.fail(error);
-            });
-          });
-        }
-      }]);
-
-      return BookingComponent;
-    }();
-
-    BookingComponent.ctorParameters = function () {
-      return [{
-        type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
-      }, {
-        type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"]
-      }];
-    };
-
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], {
-      "static": true
-    })], BookingComponent.prototype, "loader", void 0);
-    BookingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-booking',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./booking.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./booking.component.css */
-      "./src/app/dashboard/booking/booking.component.css"))["default"]]
-    })], BookingComponent);
     /***/
   },
 
@@ -1533,13 +1292,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toggleSideBar",
         value: function toggleSideBar() {
-          var _this3 = this;
+          var _this = this;
 
           this.sideBar = !this.sideBar;
 
           if (!this.sideBarMenu) {
             var interval = setInterval(function () {
-              _this3.sideBarMenu = true;
+              _this.sideBarMenu = true;
               clearInterval(interval);
             }, 150);
           } else this.sideBarMenu = false;
@@ -1696,16 +1455,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "list",
         value: function list() {
-          var _this4 = this;
+          var _this2 = this;
 
           this.loader.load();
           this.api.listFundRaisers().subscribe(function (response) {
-            _this4.loader.resume();
+            _this2.loader.resume();
 
-            _this4.api.validateResponse(response, function (data) {
-              _this4.funds = data;
+            _this2.api.validateResponse(response, function (data) {
+              _this2.funds = data;
             }, function (error) {
-              _this4.bot.fail(error);
+              _this2.bot.fail(error);
             });
           });
         }
@@ -1717,22 +1476,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addFundsRaiser",
         value: function addFundsRaiser() {
-          var _this5 = this;
+          var _this3 = this;
 
           var funds = this.form.value;
           funds.deposit = true;
           this.loader.load();
           this.api.addFundRaiser(funds).subscribe(function (response) {
-            _this5.loader.resume();
+            _this3.loader.resume();
 
-            _this5.api.validateResponse(response, function (data) {
-              _this5.funds.push(data);
+            _this3.api.validateResponse(response, function (data) {
+              _this3.funds.push(data);
 
-              _this5.form.reset();
+              _this3.form.reset();
 
-              _this5.bot.success("Funds Added!");
+              _this3.bot.success("Funds Raiser Added!");
             }, function (error) {
-              _this5.bot.fail(error);
+              _this3.bot.fail(error);
             });
           });
         }
@@ -1870,16 +1629,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "list",
         value: function list() {
-          var _this6 = this;
+          var _this4 = this;
 
           this.loader.load();
           this.api.listFunds().subscribe(function (response) {
-            _this6.loader.resume();
+            _this4.loader.resume();
 
-            _this6.api.validateResponse(response, function (data) {
-              _this6.funds = data;
+            _this4.api.validateResponse(response, function (data) {
+              _this4.funds = data;
             }, function (error) {
-              _this6.bot.fail(error);
+              _this4.bot.fail(error);
             });
           });
         }
@@ -1896,44 +1655,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addFunds",
         value: function addFunds() {
-          var _this7 = this;
+          var _this5 = this;
 
           var funds = this.form.value;
           funds.deposit = true;
           this.loader.load();
           this.api.addFunds(funds).subscribe(function (response) {
-            _this7.loader.resume();
+            _this5.loader.resume();
 
-            _this7.api.validateResponse(response, function (data) {
-              _this7.funds.push(data);
+            _this5.api.validateResponse(response, function (data) {
+              _this5.funds.push(data);
 
-              _this7.form.reset();
+              _this5.form.reset();
 
-              _this7.bot.success("Funds Added!");
+              _this5.bot.success("Funds Added!");
             }, function (error) {
-              _this7.bot.fail(error);
+              _this5.bot.fail(error);
             });
           });
         }
       }, {
         key: "utilizeFunds",
         value: function utilizeFunds() {
-          var _this8 = this;
+          var _this6 = this;
 
           var funds = this.utForm.value;
           funds.deposit = false;
           this.loader.load();
           this.api.addFunds(funds).subscribe(function (response) {
-            _this8.loader.resume();
+            _this6.loader.resume();
 
-            _this8.api.validateResponse(response, function (data) {
-              _this8.funds.push(data);
+            _this6.api.validateResponse(response, function (data) {
+              _this6.funds.push(data);
 
-              _this8.utForm.reset();
+              _this6.utForm.reset();
 
-              _this8.bot.success("Funds Utilized!");
+              _this6.bot.success("Funds Utilized!");
             }, function (error) {
-              _this8.bot.fail(error);
+              _this6.bot.fail(error);
             });
           });
         }
@@ -1964,160 +1723,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./funds.component.css */
       "./src/app/dashboard/funds/funds.component.css"))["default"]]
     })], FundsComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/payment-history/payment-history.component.css":
-  /*!*************************************************************************!*\
-    !*** ./src/app/dashboard/payment-history/payment-history.component.css ***!
-    \*************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppDashboardPaymentHistoryPaymentHistoryComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9wYXltZW50LWhpc3RvcnkvcGF5bWVudC1oaXN0b3J5LmNvbXBvbmVudC5jc3MifQ== */";
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/payment-history/payment-history.component.ts":
-  /*!************************************************************************!*\
-    !*** ./src/app/dashboard/payment-history/payment-history.component.ts ***!
-    \************************************************************************/
-
-  /*! exports provided: PaymentHistoryComponent */
-
-  /***/
-  function srcAppDashboardPaymentHistoryPaymentHistoryComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "PaymentHistoryComponent", function () {
-      return PaymentHistoryComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/loader/loader.component */
-    "./src/app/loader/loader.component.ts");
-    /* harmony import */
-
-
-    var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! src/app/services/api/api.service */
-    "./src/app/services/api/api.service.ts");
-    /* harmony import */
-
-
-    var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! src/app/services/notification-bot/bot.service */
-    "./src/app/services/notification-bot/bot.service.ts");
-
-    var PaymentHistoryComponent = /*#__PURE__*/function () {
-      function PaymentHistoryComponent(api, bot) {
-        _classCallCheck(this, PaymentHistoryComponent);
-
-        this.api = api;
-        this.bot = bot;
-        this.page = {};
-        this.bookings = [];
-        this.pageNumber = 0;
-        this.pageSize = 50;
-        this.sortBy = "bookingFrom";
-        this.sortDirection = "desc";
-      }
-
-      _createClass(PaymentHistoryComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.load();
-        }
-      }, {
-        key: "load",
-        value: function load() {
-          var _this9 = this;
-
-          this.loader.load();
-          this.api.listBookings(this.pageNumber, this.pageSize, this.sortBy, this.sortDirection).subscribe(function (response) {
-            _this9.loader.resume();
-
-            _this9.api.validateResponse(response, function (data) {
-              _this9.page.numberOfElements = data.numberOfElements;
-              _this9.page.totalPages = data.totalPages;
-              _this9.page.totalElements = data.totalElements;
-              _this9.bookings = data.content;
-            }, function (error) {
-              _this9.bot.fail(error);
-            });
-          });
-        }
-      }, {
-        key: "cancel",
-        value: function cancel(id) {
-          var _this10 = this;
-
-          this.loader.load();
-          this.api.cancel(id).subscribe(function (response) {
-            _this10.loader.resume();
-
-            _this10.api.validateResponse(response, function (data) {
-              _this10.bot.success("Booking Cancelled !");
-
-              _this10.load();
-            }, function (error) {
-              _this10.bot.fail(error);
-            });
-          });
-        }
-      }]);
-
-      return PaymentHistoryComponent;
-    }();
-
-    PaymentHistoryComponent.ctorParameters = function () {
-      return [{
-        type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
-      }, {
-        type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"]
-      }];
-    };
-
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], {
-      "static": true
-    })], PaymentHistoryComponent.prototype, "loader", void 0);
-    PaymentHistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-payment-history',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./payment-history.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./payment-history.component.css */
-      "./src/app/dashboard/payment-history/payment-history.component.css"))["default"]]
-    })], PaymentHistoryComponent);
     /***/
   },
 
@@ -2213,39 +1818,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ProfileComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this11 = this;
+          var _this7 = this;
 
           this.api.getUser().subscribe(function (data) {
-            _this11.loader.resume();
+            _this7.loader.resume();
 
-            _this11.user = data;
+            _this7.user = data;
           }, function (error) {
-            _this11.loader.resume();
+            _this7.loader.resume();
 
-            _this11.bot.fail(_this11.msg.show(error.error.status));
+            _this7.bot.fail(_this7.msg.show(error.error.status));
           });
         }
       }, {
         key: "changePassword",
         value: function changePassword() {
-          var _this12 = this;
+          var _this8 = this;
 
           if (this.cPass == this.pass && this.pass != "" && this.oldPass != "") {
             this.loader.load();
             this.api.updatePassword(this.pass, this.oldPass).subscribe(function (data) {
-              _this12.pass = "";
-              _this12.cPass = "";
+              _this8.pass = "";
+              _this8.cPass = "";
 
-              _this12.loader.resume();
+              _this8.loader.resume();
 
-              _this12.bot.success("Password Changed Successfully !");
+              _this8.bot.success("Password Changed Successfully !");
             }, function (error) {
-              _this12.pass = "";
-              _this12.cPass = "";
+              _this8.pass = "";
+              _this8.cPass = "";
 
-              _this12.loader.resume();
+              _this8.loader.resume();
 
-              _this12.bot.fail(_this12.msg.show(error.error.status));
+              _this8.bot.fail(_this8.msg.show(error.error.status));
             });
           } else if (this.pass == "") {
             this.bot.fail("Password cannot be blank");
@@ -2278,164 +1883,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./profile.component.css */
       "./src/app/dashboard/profile/profile.component.css"))["default"]]
     })], ProfileComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/room/room.component.css":
-  /*!***************************************************!*\
-    !*** ./src/app/dashboard/room/room.component.css ***!
-    \***************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppDashboardRoomRoomComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9yb29tL3Jvb20uY29tcG9uZW50LmNzcyJ9 */";
-    /***/
-  },
-
-  /***/
-  "./src/app/dashboard/room/room.component.ts":
-  /*!**************************************************!*\
-    !*** ./src/app/dashboard/room/room.component.ts ***!
-    \**************************************************/
-
-  /*! exports provided: RoomComponent */
-
-  /***/
-  function srcAppDashboardRoomRoomComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "RoomComponent", function () {
-      return RoomComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/loader/loader.component */
-    "./src/app/loader/loader.component.ts");
-    /* harmony import */
-
-
-    var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! src/app/services/api/api.service */
-    "./src/app/services/api/api.service.ts");
-    /* harmony import */
-
-
-    var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! src/app/services/notification-bot/bot.service */
-    "./src/app/services/notification-bot/bot.service.ts");
-
-    var RoomComponent = /*#__PURE__*/function () {
-      function RoomComponent(api, bot) {
-        _classCallCheck(this, RoomComponent);
-
-        this.api = api;
-        this.bot = bot;
-        this.rooms = [];
-      }
-
-      _createClass(RoomComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }, {
-        key: "validateAndSearch",
-        value: function validateAndSearch() {
-          if (this.fromDate == undefined) this.bot.fail("Select From Date !");else if (this.toDate == undefined) this.bot.fail("Select To Date !");else this.list();
-        }
-      }, {
-        key: "list",
-        value: function list() {
-          var _this13 = this;
-
-          this.loader.load();
-          this.api.listRooms(this.fromDate, this.toDate).subscribe(function (response) {
-            _this13.persistedFromDate = _this13.fromDate;
-            _this13.persistedToDate = _this13.toDate;
-
-            _this13.loader.resume();
-
-            _this13.api.validateResponse(response, function (data) {
-              _this13.rooms = data;
-            }, function (error) {
-              _this13.bot.fail(error);
-            });
-          });
-        }
-      }, {
-        key: "book",
-        value: function book(id) {
-          var _this14 = this;
-
-          var booking = {};
-          var room = {};
-          room.roomId = id;
-          booking.bookingFrom = this.persistedFromDate;
-          booking.bookingTo = this.persistedToDate;
-          booking.room = room;
-          this.loader.load();
-          this.api.book(booking).subscribe(function (response) {
-            _this14.loader.resume();
-
-            _this14.api.validateResponse(response, function (data) {
-              _this14.rooms = _this14.rooms.filter(function (room) {
-                return room.roomId != id;
-              });
-            }, function (error) {
-              return _this14.bot.fail(error);
-            });
-          });
-        }
-      }]);
-
-      return RoomComponent;
-    }();
-
-    RoomComponent.ctorParameters = function () {
-      return [{
-        type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
-      }, {
-        type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"]
-      }];
-    };
-
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], {
-      "static": true
-    })], RoomComponent.prototype, "loader", void 0);
-    RoomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-room',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./room.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./room.component.css */
-      "./src/app/dashboard/room/room.component.css"))["default"]]
-    })], RoomComponent);
     /***/
   },
 
@@ -2765,26 +2212,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login() {
-          var _this15 = this;
+          var _this9 = this;
 
           this.loader.load();
           this.api.login(this.form.value).subscribe(function (response) {
-            _this15.api.validateResponse(response, function (data) {
-              _this15.loader.resume();
+            _this9.api.validateResponse(response, function (data) {
+              _this9.loader.resume();
 
-              if (_this15.remember) {
-                localStorage.setItem("savedUser", _this15.form.get("username").value);
-                localStorage.setItem("savedPassword", _this15.form.get("password").value);
+              if (_this9.remember) {
+                localStorage.setItem("savedUser", _this9.form.get("username").value);
+                localStorage.setItem("savedPassword", _this9.form.get("password").value);
               }
 
               localStorage.setItem('currentToken', data.token);
               localStorage.setItem('currentRole', data.user.role);
 
-              _this15.router.navigateByUrl("/");
+              _this9.router.navigateByUrl("/");
             }, function (error) {
-              _this15.loader.resume();
+              _this9.loader.resume();
 
-              _this15.bot.fail(error);
+              _this9.bot.fail(error);
             });
           });
         }
@@ -2804,13 +2251,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "resetPassword",
         value: function resetPassword() {
-          var _this16 = this;
+          var _this10 = this;
 
           if (this.username == "") this.bot.fail("Please enter a username first !");else {
             this.api.forgot(this.username).subscribe(function (data) {
-              _this16.bot.alert("The reset link has been sent to your registered e-mail !");
+              _this10.bot.alert("The reset link has been sent to your registered e-mail !");
             }, function (error) {
-              _this16.bot.fail(_this16.msg.show(error.error.status));
+              _this10.bot.fail(_this10.msg.show(error.error.status));
             });
           }
         }
@@ -3005,26 +2452,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "signUp",
         value: function signUp() {
-          var _this17 = this;
+          var _this11 = this;
 
           this.loader.load();
           this.api.signUp(this.form.value).subscribe(function (response) {
-            _this17.api.validateResponse(response, function (data) {
-              _this17.loader.resume();
+            _this11.api.validateResponse(response, function (data) {
+              _this11.loader.resume();
 
-              if (_this17.remember) {
-                localStorage.setItem("savedUser", _this17.form.get("username").value);
-                localStorage.setItem("savedPassword", _this17.form.get("password").value);
+              if (_this11.remember) {
+                localStorage.setItem("savedUser", _this11.form.get("username").value);
+                localStorage.setItem("savedPassword", _this11.form.get("password").value);
               }
 
               localStorage.setItem('currentToken', data.token);
               localStorage.setItem('currentRole', data.user.role);
 
-              _this17.router.navigateByUrl("/");
+              _this11.router.navigateByUrl("/");
             }, function (error) {
-              _this17.loader.resume();
+              _this11.loader.resume();
 
-              _this17.bot.fail(error);
+              _this11.bot.fail(error);
             });
           });
         }
@@ -3044,13 +2491,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "resetPassword",
         value: function resetPassword() {
-          var _this18 = this;
+          var _this12 = this;
 
           if (this.username == "") this.bot.fail("Please enter a username first !");else {
             this.api.forgot(this.username).subscribe(function (data) {
-              _this18.bot.alert("The reset link has been sent to your registered e-mail !");
+              _this12.bot.alert("The reset link has been sent to your registered e-mail !");
             }, function (error) {
-              _this18.bot.fail(_this18.msg.show(error.error.status));
+              _this12.bot.fail(_this12.msg.show(error.error.status));
             });
           }
         }
@@ -3176,7 +2623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ResetComponent = /*#__PURE__*/function () {
       function ResetComponent(bot, msg, api, route) {
-        var _this19 = this;
+        var _this13 = this;
 
         _classCallCheck(this, ResetComponent);
 
@@ -3188,7 +2635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.confirmPassword = "";
         this.showPass = false;
         this.route.params.subscribe(function (val) {
-          _this19.token = _this19.route.snapshot.paramMap.get("token");
+          _this13.token = _this13.route.snapshot.paramMap.get("token");
         });
       }
 
@@ -3203,13 +2650,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "changePassword",
         value: function changePassword() {
-          var _this20 = this;
+          var _this14 = this;
 
           if (this.password != "" && this.confirmPassword == this.password) {
             this.api.reset(this.password, this.token).subscribe(function (data) {
-              _this20.bot.success("Password has been changed successfully !");
+              _this14.bot.success("Password has been changed successfully !");
             }, function (error) {
-              _this20.bot.fail(_this20.msg.show(error.error.status));
+              _this14.bot.fail(_this14.msg.show(error.error.status));
             });
           } else if (this.password == "") this.bot.fail("Password cannot be blank");else this.bot.fail("Password should be same in both the fields !");
         }
@@ -3302,8 +2749,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.PROFILE_URL = this.SECURE + "/profile";
         this.FUNDS_URL = this.SECURE + "/funds";
         this.FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
-        this.BOOKING_URL = this.SECURE + "/booking";
-        this.ROOM_URL = this.SECURE + "/room";
         this.FORGOT_URL = this.HOST + "/public/forgot";
         this.RESET_URL = this.HOST + "/public/reset";
       }
@@ -3327,26 +2772,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "listFundRaisers",
         value: function listFundRaisers() {
           return this.http.get(this.FUND_RAISER_URL);
-        }
-      }, {
-        key: "book",
-        value: function book(booking) {
-          return this.http.post(this.BOOKING_URL, booking);
-        }
-      }, {
-        key: "listBookings",
-        value: function listBookings(pageNumber, pageSize, sortBy, sortDirection) {
-          return this.http.get(this.BOOKING_URL + "/mine?pageNumber=" + pageNumber + "&pageSize=" + pageSize + "&sortBy=" + sortBy + "&sortDirection=" + sortDirection);
-        }
-      }, {
-        key: "listRooms",
-        value: function listRooms(bookingFrom, bookingTo) {
-          return this.http.get(this.ROOM_URL + "/query?from=" + bookingFrom + "&to=" + bookingTo);
-        }
-      }, {
-        key: "cancel",
-        value: function cancel(bookingId) {
-          return this.http.put(this.BOOKING_URL + "/" + bookingId, {});
         }
       }, {
         key: "forgot",
@@ -3761,7 +3186,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(TpInterceptorServicer, [{
         key: "intercept",
         value: function intercept(request, next) {
-          var _this21 = this;
+          var _this15 = this;
 
           var token = window.localStorage.getItem("currentToken");
 
@@ -3780,7 +3205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (error.status == 401) {
                 localStorage.setItem("currentToken", undefined);
 
-                _this21.router.navigateByUrl("/login");
+                _this15.router.navigateByUrl("/login");
               }
             }
           }));

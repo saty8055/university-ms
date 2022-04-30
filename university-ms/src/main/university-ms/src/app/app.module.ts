@@ -16,10 +16,7 @@ import { F04Component } from './f04/f04.component';
 import { DatePipe } from '@angular/common';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { ResetComponent } from './reset/reset.component';
-import { RoomComponent } from './dashboard/room/room.component';
-import { BookingComponent } from './dashboard/booking/booking.component';
 import { RegisterComponent } from './register/register.component';
-import { PaymentHistoryComponent } from './dashboard/payment-history/payment-history.component';
 import { FundsComponent } from './dashboard/funds/funds.component';
 import { FundRaiserComponent } from './dashboard/fund-raiser/fund-raiser.component';
 
@@ -32,10 +29,7 @@ import { FundRaiserComponent } from './dashboard/fund-raiser/fund-raiser.compone
     F04Component,
     ProfileComponent,
     ResetComponent,
-    RoomComponent,
-    BookingComponent,
     RegisterComponent,
-    PaymentHistoryComponent,
     FundsComponent,
     FundRaiserComponent,
   ],

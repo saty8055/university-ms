@@ -29,10 +29,6 @@ export class ApiService {
 
   private FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
 
-  private BOOKING_URL = this.SECURE + "/booking";
-
-  private ROOM_URL = this.SECURE + "/room";
-
   private FORGOT_URL = this.HOST + "/public/forgot";
 
   private RESET_URL = this.HOST + "/public/reset";
@@ -51,22 +47,6 @@ export class ApiService {
 
   public listFundRaisers():Observable<any> {
     return this.http.get(this.FUND_RAISER_URL);
-  }
-
-  public book(booking:any): Observable<any> {
-    return this.http.post(this.BOOKING_URL, booking);
-  }
-
-  public listBookings(pageNumber:number, pageSize:number, sortBy:string, sortDirection:string):Observable<any> {
-    return this.http.get(this.BOOKING_URL+"/mine?pageNumber="+pageNumber+"&pageSize="+pageSize+"&sortBy="+sortBy+"&sortDirection="+sortDirection);
-  }
-
-  public listRooms(bookingFrom:string, bookingTo:string):Observable<any> {
-    return this.http.get(this.ROOM_URL+"/query?from="+bookingFrom+"&to="+bookingTo);
-  }
-
-  public cancel(bookingId:string):Observable<any> {
-    return this.http.put(this.BOOKING_URL+"/"+bookingId, {});
   }
 
   public forgot(username: string): Observable<any> {

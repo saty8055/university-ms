@@ -6,10 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { F04Component } from './f04/f04.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { ResetComponent } from './reset/reset.component';
-import { BookingComponent } from './dashboard/booking/booking.component';
-import { RoomComponent } from './dashboard/room/room.component';
 import { RegisterComponent } from './register/register.component';
-import { PaymentHistoryComponent } from './dashboard/payment-history/payment-history.component';
 import { FundsComponent } from './dashboard/funds/funds.component';
 import { FundRaiserComponent } from './dashboard/fund-raiser/fund-raiser.component';
 
@@ -25,9 +22,6 @@ const routes: Routes = [{
   },{
     path: "raiser",
     component: FundRaiserComponent
-  }, {
-    path: "room",
-    component: RoomComponent
   },{
     path: "",
     redirectTo: "/funds",

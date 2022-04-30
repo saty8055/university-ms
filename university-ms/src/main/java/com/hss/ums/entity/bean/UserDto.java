@@ -1,6 +1,5 @@
 package com.hss.ums.entity.bean;
 
-import com.hss.ums.entity.Booking;
 import com.hss.ums.entity.User;
 import org.springframework.beans.BeanUtils;
 
@@ -15,22 +14,11 @@ public class UserDto {
 		BeanUtils.copyProperties(user, this);
 	}
 
-	public UserDto(User user, List<Booking> bookings) {
-		BeanUtils.copyProperties(user, this);
-		this.bookings = new ArrayList<>();
-		bookings.forEach(booking -> {
-			BookingDto dto = new BookingDto(booking);
-			this.bookings.add(dto);
-		});
-	}
-
 	private String username, fullName, email;
 
 	private String password, oldPassword, deviceId, fcmToken;
 
 	private Integer status;
-
-	public List<BookingDto> bookings;
 
 	public String getUsername() {
 		return username;
@@ -96,11 +84,4 @@ public class UserDto {
 		this.fcmToken = fcmToken;
 	}
 
-	public List<BookingDto> getBookings() {
-		return bookings;
-	}
-
-	public void setBookings(List<BookingDto> bookings) {
-		this.bookings = bookings;
-	}
 }

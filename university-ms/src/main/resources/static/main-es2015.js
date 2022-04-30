@@ -36,19 +36,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n <div class=\"table-responsive\">\n   <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Room No</th>\n                <th class=\"centered\">Class</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">AC</th>\n                <th class=\"centered\">Hotel / Villa</th>\n                <th class=\"centered\">Price</th>\n                <th class=\"centered\">Suite</th>\n                <th class=\"centered\">From </th>\n                <th class=\"centered\">To</th>\n                <th class=\"centered\">Booked At</th>\n                <th class=\"centered\" colspan=\"2\">Status</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of bookings; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.room.roomNumber}}</td>\n                <td>{{record.room.houseClass}}</td>\n                <td>{{record.room.houseName}}</td>\n                <td>{{record.room.isAc ? 'AC' : 'NON_AC'}}</td>\n                <td>{{record.room.isHotel? 'HOTEL' : 'VILLA'}}</td>\n                <td>{{record.room.price| number :'.2-2'}}</td>\n                <td>{{record.room.suiteName}}</td>\n                <td>{{record.bookingFrom | date:'dd/MM/yyyy'}}</td>\n                <td>{{record.bookingTo | date:'dd/MM/yyyy'}}</td>\n                <td>{{record.createdAt | date:'dd/MM/yyyy - hh:mm aa'}}</td>\n                <td *ngIf=\"!record.cancelled\">{{record.cancelled ? 'CANCELLED' : 'ACTIVE'}}</td>\n                <td *ngIf=\"record.cancelled\" colspan=\"2\">{{record.cancelled ? 'CANCELLED' : 'ACTIVE'}}</td>\n                <td *ngIf=\"!record.cancelled\"><button class=\"btn btnPrime\" (click)=\"cancel(record.bookingId)\" *ngIf=\"!record.cancelled\"><span class=\"fa fa-remove\"></span> Cancel</button></td>\n            </tr>\n            <tr *ngIf=\"bookings.length <1 \">\n                <th colspan=\"13\">No Record found</th>\n                </tr>\n        </tbody>\n    </table>\n \n</div>\n\n<app-loader></app-loader>");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html":
 /*!******************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html ***!
@@ -88,19 +75,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html ***!
-  \****************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n <div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n         <thead>\n             <tr>\n                 <th class=\"centered indexCell matchDouble\">#</th>\n                 <th class=\"extendedCell matchDouble\">Transaction ID</th>\n                 <th class=\"centered\">Transaction Amount</th>\n                 <th class=\"centered\">Transaction Time</th>\n                 <th class=\"centered\">Room Number</th>\n             </tr>\n         </thead>\n         <tbody>\n             <tr *ngFor=\"let record of bookings; let i=index;\">\n                 <th>{{i+1}}</th>\n                 <td>{{record.room.bookingId}}</td>\n                 <td>{{record.room.price| number :'.2-2'}}</td>\n                 <td>{{record.createdAt | date:'dd/MM/yyyy - hh:mm aa'}}</td>\n                 <td>{{record.room.roomNumber}}</td>\n             </tr>\n             <tr *ngIf=\"bookings.length <1 \">\n                 <th colspan=\"13\">No Record found</th>\n                 </tr>\n         </tbody>\n     </table>\n  \n </div>\n \n <app-loader></app-loader>");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/profile/profile.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/profile/profile.component.html ***!
@@ -111,19 +85,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\" style=\"padding-top:100px;\">\n    <div class=\"row\">\n        <div class=\"col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-12 col-xs-12\" style=\"overflow: auto;\">\n            <table class=\"dataGrid\" style=\"margin-left: calc(50% - 345px);\">\n                <thead>\n                    <tr>\n                        <th class=\"index\" colspan=\"2\">\n                            Personal Info\n                        </th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <th class=\"index\" style=\"width:150px;\">Name</th>\n                        <td style=\"width: 300px;\">{{user.fullName}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">User Name</th>\n                        <td>{{user.username}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">e-mail</th>\n                        <td>{{user.email}}</td>\n                    </tr>\n                    <tr>\n                        <th class=\"index\">Password</th>\n                        <td>\n                            <button class=\"btn\" data-toggle=\"modal\" data-target=\"#changePassword\">change</button>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"changePassword\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Change Password</h4>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"oldPass\" placeholder=\"Current Password\">\n                </div>\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"pass\" placeholder=\"New Password\">\n                </div>\n                <div class=\"input-group\">\n                    <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>\n                    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"cPass\" placeholder=\"Confirm Password\">\n                </div>\n            </div>\n            <div class=\"modal-footer centered\">\n                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"changePassword()\"><span class=\"fa fa-plus-square\"></span> Change Password</button>\n            </div>\n        </div>\n\n    </div>\n</div>\n\n\n\n<app-loader>\n</app-loader>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><input class=\"form-control\" type=\"date\" [(ngModel)]=\"fromDate\"/></th>\n            <th><input class=\"form-control\" type=\"date\" [(ngModel)]=\"toDate\"/></th>\n            <th><button class=\"btn btnPrime fullCover\" (click)=\"validateAndSearch()\" ><span class=\"fa fa-eye\"></span> Search</button></th>\n        </tr>\n    </thead>\n</table>\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Room No</th>\n                <th class=\"centered\">Class</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">AC</th>\n                <th class=\"centered\">Hotel / Villa</th>\n                <th class=\"centered\">Price</th>\n                <th class=\"centered\" colspan=\"2\">Suite</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of rooms; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.roomNumber}}</td>\n                <td>{{record.houseClass}}</td>\n                <td>{{record.houseName}}</td>\n                <td>{{record.isAc ? 'AC' : 'NON_AC'}}</td>\n                <td>{{record.isHotel? 'HOTEL' : 'VILLA'}}</td>\n                <td>{{record.price| number :'.2-2'}}</td>\n                <td>{{record.suiteName}}</td>\n                <td><button class=\"btn btnPrime\" (click)=\"book(record.roomId)\"><span class=\"fa fa-save\"></span> Book</button></td>\n            </tr>\n            <tr *ngIf=\"rooms.length <1 \">\n                <th colspan=\"9\">No Record found</th>\n                </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<app-loader></app-loader>");
 
 /***/ }),
 
@@ -465,11 +426,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _f04_f04_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./f04/f04.component */ "./src/app/f04/f04.component.ts");
 /* harmony import */ var _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/profile/profile.component */ "./src/app/dashboard/profile/profile.component.ts");
 /* harmony import */ var _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./reset/reset.component */ "./src/app/reset/reset.component.ts");
-/* harmony import */ var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard/room/room.component */ "./src/app/dashboard/room/room.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
-/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
-
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
+/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
 
 
@@ -490,13 +449,10 @@ const routes = [{
                 component: _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"]
             }, {
                 path: "funds",
-                component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__["FundsComponent"]
+                component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_10__["FundsComponent"]
             }, {
                 path: "raiser",
-                component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__["FundRaiserComponent"]
-            }, {
-                path: "room",
-                component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__["RoomComponent"]
+                component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_11__["FundRaiserComponent"]
             }, {
                 path: "",
                 redirectTo: "/funds",
@@ -508,7 +464,7 @@ const routes = [{
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     }, {
         path: "register",
-        component: _register_register_component__WEBPACK_IMPORTED_MODULE_10__["RegisterComponent"]
+        component: _register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"]
     }, {
         path: "reset/:token",
         component: _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__["ResetComponent"]
@@ -603,15 +559,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./dashboard/profile/profile.component */ "./src/app/dashboard/profile/profile.component.ts");
 /* harmony import */ var _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./reset/reset.component */ "./src/app/reset/reset.component.ts");
-/* harmony import */ var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./dashboard/room/room.component */ "./src/app/dashboard/room/room.component.ts");
-/* harmony import */ var _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./dashboard/booking/booking.component */ "./src/app/dashboard/booking/booking.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./dashboard/payment-history/payment-history.component */ "./src/app/dashboard/payment-history/payment-history.component.ts");
-/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
-/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
-
-
-
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
+/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
 
 
@@ -645,12 +595,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _f04_f04_component__WEBPACK_IMPORTED_MODULE_14__["F04Component"],
             _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__["ProfileComponent"],
             _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__["ResetComponent"],
-            _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__["RoomComponent"],
-            _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__["BookingComponent"],
-            _register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
-            _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__["PaymentHistoryComponent"],
-            _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__["FundsComponent"],
-            _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__["FundRaiserComponent"],
+            _register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"],
+            _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_19__["FundsComponent"],
+            _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_20__["FundRaiserComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -673,99 +620,6 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })
 ], AppModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/dashboard/booking/booking.component.css":
-/*!*********************************************************!*\
-  !*** ./src/app/dashboard/booking/booking.component.css ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9ib29raW5nL2Jvb2tpbmcuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/dashboard/booking/booking.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/dashboard/booking/booking.component.ts ***!
-  \********************************************************/
-/*! exports provided: BookingComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookingComponent", function() { return BookingComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/loader/loader.component */ "./src/app/loader/loader.component.ts");
-/* harmony import */ var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/api/api.service */ "./src/app/services/api/api.service.ts");
-/* harmony import */ var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/notification-bot/bot.service */ "./src/app/services/notification-bot/bot.service.ts");
-
-
-
-
-
-let BookingComponent = class BookingComponent {
-    constructor(api, bot) {
-        this.api = api;
-        this.bot = bot;
-        this.page = {};
-        this.bookings = [];
-        this.pageNumber = 0;
-        this.pageSize = 50;
-        this.sortBy = "bookingFrom";
-        this.sortDirection = "desc";
-    }
-    ngOnInit() {
-        this.load();
-    }
-    load() {
-        this.loader.load();
-        this.api.listBookings(this.pageNumber, this.pageSize, this.sortBy, this.sortDirection).subscribe(response => {
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.page.numberOfElements = data.numberOfElements;
-                this.page.totalPages = data.totalPages;
-                this.page.totalElements = data.totalElements;
-                this.bookings = data.content;
-            }, error => {
-                this.bot.fail(error);
-            });
-        });
-    }
-    cancel(id) {
-        this.loader.load();
-        this.api.cancel(id).subscribe(response => {
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.bot.success("Booking Cancelled !");
-                this.load();
-            }, error => {
-                this.bot.fail(error);
-            });
-        });
-    }
-};
-BookingComponent.ctorParameters = () => [
-    { type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] },
-    { type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], { static: true })
-], BookingComponent.prototype, "loader", void 0);
-BookingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-booking',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./booking.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/booking/booking.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./booking.component.css */ "./src/app/dashboard/booking/booking.component.css")).default]
-    })
-], BookingComponent);
 
 
 
@@ -943,7 +797,7 @@ let FundRaiserComponent = class FundRaiserComponent {
             this.api.validateResponse(response, data => {
                 this.funds.push(data);
                 this.form.reset();
-                this.bot.success("Funds Added!");
+                this.bot.success("Funds Raiser Added!");
             }, error => {
                 this.bot.fail(error);
             });
@@ -1107,99 +961,6 @@ FundsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/dashboard/payment-history/payment-history.component.css":
-/*!*************************************************************************!*\
-  !*** ./src/app/dashboard/payment-history/payment-history.component.css ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9wYXltZW50LWhpc3RvcnkvcGF5bWVudC1oaXN0b3J5LmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/dashboard/payment-history/payment-history.component.ts":
-/*!************************************************************************!*\
-  !*** ./src/app/dashboard/payment-history/payment-history.component.ts ***!
-  \************************************************************************/
-/*! exports provided: PaymentHistoryComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentHistoryComponent", function() { return PaymentHistoryComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/loader/loader.component */ "./src/app/loader/loader.component.ts");
-/* harmony import */ var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/api/api.service */ "./src/app/services/api/api.service.ts");
-/* harmony import */ var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/notification-bot/bot.service */ "./src/app/services/notification-bot/bot.service.ts");
-
-
-
-
-
-let PaymentHistoryComponent = class PaymentHistoryComponent {
-    constructor(api, bot) {
-        this.api = api;
-        this.bot = bot;
-        this.page = {};
-        this.bookings = [];
-        this.pageNumber = 0;
-        this.pageSize = 50;
-        this.sortBy = "bookingFrom";
-        this.sortDirection = "desc";
-    }
-    ngOnInit() {
-        this.load();
-    }
-    load() {
-        this.loader.load();
-        this.api.listBookings(this.pageNumber, this.pageSize, this.sortBy, this.sortDirection).subscribe(response => {
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.page.numberOfElements = data.numberOfElements;
-                this.page.totalPages = data.totalPages;
-                this.page.totalElements = data.totalElements;
-                this.bookings = data.content;
-            }, error => {
-                this.bot.fail(error);
-            });
-        });
-    }
-    cancel(id) {
-        this.loader.load();
-        this.api.cancel(id).subscribe(response => {
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.bot.success("Booking Cancelled !");
-                this.load();
-            }, error => {
-                this.bot.fail(error);
-            });
-        });
-    }
-};
-PaymentHistoryComponent.ctorParameters = () => [
-    { type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] },
-    { type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], { static: true })
-], PaymentHistoryComponent.prototype, "loader", void 0);
-PaymentHistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-payment-history',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./payment-history.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/payment-history/payment-history.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./payment-history.component.css */ "./src/app/dashboard/payment-history/payment-history.component.css")).default]
-    })
-], PaymentHistoryComponent);
-
-
-
-/***/ }),
-
 /***/ "./src/app/dashboard/profile/profile.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/dashboard/profile/profile.component.css ***!
@@ -1295,103 +1056,6 @@ ProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./profile.component.css */ "./src/app/dashboard/profile/profile.component.css")).default]
     })
 ], ProfileComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/dashboard/room/room.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/dashboard/room/room.component.css ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9yb29tL3Jvb20uY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/dashboard/room/room.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/dashboard/room/room.component.ts ***!
-  \**************************************************/
-/*! exports provided: RoomComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoomComponent", function() { return RoomComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/loader/loader.component */ "./src/app/loader/loader.component.ts");
-/* harmony import */ var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/api/api.service */ "./src/app/services/api/api.service.ts");
-/* harmony import */ var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/notification-bot/bot.service */ "./src/app/services/notification-bot/bot.service.ts");
-
-
-
-
-
-let RoomComponent = class RoomComponent {
-    constructor(api, bot) {
-        this.api = api;
-        this.bot = bot;
-        this.rooms = [];
-    }
-    ngOnInit() {
-    }
-    validateAndSearch() {
-        if (this.fromDate == undefined)
-            this.bot.fail("Select From Date !");
-        else if (this.toDate == undefined)
-            this.bot.fail("Select To Date !");
-        else
-            this.list();
-    }
-    list() {
-        this.loader.load();
-        this.api.listRooms(this.fromDate, this.toDate).subscribe(response => {
-            this.persistedFromDate = this.fromDate;
-            this.persistedToDate = this.toDate;
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.rooms = data;
-            }, error => {
-                this.bot.fail(error);
-            });
-        });
-    }
-    book(id) {
-        let booking = {};
-        let room = {};
-        room.roomId = id;
-        booking.bookingFrom = this.persistedFromDate;
-        booking.bookingTo = this.persistedToDate;
-        booking.room = room;
-        this.loader.load();
-        this.api.book(booking).subscribe(response => {
-            this.loader.resume();
-            this.api.validateResponse(response, data => {
-                this.rooms = this.rooms.filter(room => room.roomId != id);
-            }, error => this.bot.fail(error));
-        });
-    }
-};
-RoomComponent.ctorParameters = () => [
-    { type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] },
-    { type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_4__["BotService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_2__["LoaderComponent"], { static: true })
-], RoomComponent.prototype, "loader", void 0);
-RoomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-room',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./room.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/room/room.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./room.component.css */ "./src/app/dashboard/room/room.component.css")).default]
-    })
-], RoomComponent);
 
 
 
@@ -1925,8 +1589,6 @@ class ApiService {
         this.PROFILE_URL = this.SECURE + "/profile";
         this.FUNDS_URL = this.SECURE + "/funds";
         this.FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
-        this.BOOKING_URL = this.SECURE + "/booking";
-        this.ROOM_URL = this.SECURE + "/room";
         this.FORGOT_URL = this.HOST + "/public/forgot";
         this.RESET_URL = this.HOST + "/public/reset";
     }
@@ -1941,18 +1603,6 @@ class ApiService {
     }
     listFundRaisers() {
         return this.http.get(this.FUND_RAISER_URL);
-    }
-    book(booking) {
-        return this.http.post(this.BOOKING_URL, booking);
-    }
-    listBookings(pageNumber, pageSize, sortBy, sortDirection) {
-        return this.http.get(this.BOOKING_URL + "/mine?pageNumber=" + pageNumber + "&pageSize=" + pageSize + "&sortBy=" + sortBy + "&sortDirection=" + sortDirection);
-    }
-    listRooms(bookingFrom, bookingTo) {
-        return this.http.get(this.ROOM_URL + "/query?from=" + bookingFrom + "&to=" + bookingTo);
-    }
-    cancel(bookingId) {
-        return this.http.put(this.BOOKING_URL + "/" + bookingId, {});
     }
     forgot(username) {
         return this.http.get(this.FORGOT_URL + "/" + username);
