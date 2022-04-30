@@ -58,7 +58,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Topbar -->\n<nav class=\"navbar navbar-fixed-top boxed\" style=\"z-index:10\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle topSpan\" (click)=\"toggleRightBar()\">\n                <span class=\"fa fa-user-circle\"></span>\n            </button>\n            <div class=\"navbar-brand\">\n                <div class=\"logoHolder\">\n                    <a class=\"btn\" (click)=\"toggleSideBar()\" [tooltip]=\"sideBar ? 'Hide Sidebar' : 'Open SideBar'\" placement=\"right\" show-delay=\"200\"><span class=\"fa fa-bars\"></span> </a>\n                    <img src=\"/assets/logoTagThumb.png\" style=\"cursor: none;\">\n                </div>\n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\"><i class=\"fa fa-user-circle-o\"></i> Profile</a></li>\n                <li><a (click)=\"logout()\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- SideBar -->\n<div class=\"sideBar boxed\" [class.sideBarOpen]=\"sideBar\" style=\"z-index:100\">\n    <a [class.active]=\"key=='booking-history'\" (click)=\"activate('booking-history')\" [class.centered]=\"!sideBar\" tooltip=\"Booking History\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span> Booking History</span>\n    </a>\n    <a [class.active]=\"key=='payment-history'\" (click)=\"activate('payment-history')\" [class.centered]=\"!sideBar\" tooltip=\"payment History\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span> Payment History</span>\n    </a>\n    <a [class.active]=\"key=='room'\" (click)=\"activate('room')\" [class.centered]=\"!sideBar\" tooltip=\"Rooms\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-list\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-list\"></span>Rooms</span>\n    </a>\n</div>\n\n<!-- Right SideBar -->\n<div class=\"rightSideBar\" [class.rightSideBarOpen]=\"rightSideBar\" style=\"z-index:100\">\n    <a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-user-circle-o\"></span> Profile</span>\n    </a>\n    <a (click)=\"logout()\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-power-off\"></span>Logout</span>\n    </a>\n</div>\n\n<div class=\"contentBox\" [class.contentWall]=\"sideBar\">\n    <router-outlet></router-outlet>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Topbar -->\n<nav class=\"navbar navbar-fixed-top boxed\" style=\"z-index:10\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle topSpan\" (click)=\"toggleRightBar()\">\n                <span class=\"fa fa-user-circle\"></span>\n            </button>\n            <div class=\"navbar-brand\">\n                <div class=\"logoHolder\">\n                    <a class=\"btn\" (click)=\"toggleSideBar()\" [tooltip]=\"sideBar ? 'Hide Sidebar' : 'Open SideBar'\" placement=\"right\" show-delay=\"200\"><span class=\"fa fa-bars\"></span> </a>\n                    <img src=\"/assets/logo.png\" style=\"cursor: none;\">\n                    <a class=\"btn\" [tooltip]=\"sideBar ? 'University MS' : 'University MS'\" placement=\"right\" show-delay=\"200\" style=\"font-family: serif;\">UMS </a>\n                </div>\n                \n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\"><i class=\"fa fa-user-circle-o\"></i> Profile</a></li>\n                <li><a (click)=\"logout()\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- SideBar -->\n<div class=\"sideBar boxed\" [class.sideBarOpen]=\"sideBar\" style=\"z-index:100\">\n    <a [class.active]=\"key=='funds'\" (click)=\"activate('funds')\" [class.centered]=\"!sideBar\" tooltip=\"Funds\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-usd\"></span> Funds</span>\n    </a>\n    <a [class.active]=\"key=='raiser'\" (click)=\"activate('raiser')\" [class.centered]=\"!sideBar\" tooltip=\"Fund Raisers\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span>Fund Raisers</span>\n    </a>\n</div>\n\n<!-- Right SideBar -->\n<div class=\"rightSideBar\" [class.rightSideBarOpen]=\"rightSideBar\" style=\"z-index:100\">\n    <a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-user-circle-o\"></span> Profile</span>\n    </a>\n    <a (click)=\"logout()\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-power-off\"></span>Logout</span>\n    </a>\n</div>\n\n<div class=\"contentBox\" [class.contentWall]=\"sideBar\">\n    <router-outlet></router-outlet>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#addFunds\"><span class=\"fa fa-plus\"></span> Add Fund Raiser Event</button></th>\n        </tr>\n    </thead>\n</table>\n\n\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Event ID</th>\n                <th class=\"centered\">Amount</th>\n                <th class=\"centered\">Reason</th>\n                <th class=\"centered\">Remarks</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of funds; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.fundRaiserId}}</td>\n                <td>{{record.amount| number :'.2-2'}}</td>\n                <td>{{record.reason}}</td>\n                <td>{{record.remarks}}</td>\n            </tr>\n            <tr *ngIf=\"funds.length <1 \">\n                <th colspan=\"5\">No Record found</th>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"addFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Add Funds !</h4>\n            </div>\n            <form [formGroup]=\"form\" (ngSubmit)=\"validateAndAdd()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"reason\" type=\"text\" class=\"form-control\" formControlName=\"reason\"\n                            placeholder=\"Reason\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndAdd()\">Add Fund Raiser</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n\n<app-loader></app-loader>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#addFunds\"><span class=\"fa fa-plus\"></span> Add Funds</button></th>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#utilizeFunds\"><span class=\"fa fa-eye\"></span> Utilize Funds</button></th>\n        </tr>\n    </thead>\n</table>\n\n\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Transaction ID</th>\n                <th class=\"centered\">Amount</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">Remarks</th>\n                <th class=\"centered\">Action</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of funds; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.fundId}}</td>\n                <td>{{record.amount| number :'.2-2'}}</td>\n                <td>{{record.name}}</td>\n                <td>{{record.remarks}}</td>\n                <td>{{record.deposit? 'Deposited' : 'Utilized'}}</td>\n            </tr>\n            <tr *ngIf=\"funds.length <1 \">\n                <th colspan=\"6\">No Record found</th>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"addFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Add Funds !</h4>\n            </div>\n            <form [formGroup]=\"form\" (ngSubmit)=\"validateAndAdd()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-user-circle\"></i></span>\n                        <input id=\"fullName\" type=\"text\" class=\"form-control\" formControlName=\"name\"\n                            placeholder=\"Full Name\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndAdd()\">Add Funds</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"utilizeFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Utilize Funds !</h4>\n            </div>\n            <form [formGroup]=\"utForm\" (ngSubmit)=\"validateAndUtilize()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-user-circle\"></i></span>\n                        <input id=\"fullName\" type=\"text\" class=\"form-control\" formControlName=\"name\"\n                            placeholder=\"Full Name\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndUtilize()\">Utilize Funds</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n<app-loader></app-loader>");
 
 /***/ }),
 
@@ -439,10 +465,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _f04_f04_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./f04/f04.component */ "./src/app/f04/f04.component.ts");
 /* harmony import */ var _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/profile/profile.component */ "./src/app/dashboard/profile/profile.component.ts");
 /* harmony import */ var _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./reset/reset.component */ "./src/app/reset/reset.component.ts");
-/* harmony import */ var _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard/booking/booking.component */ "./src/app/dashboard/booking/booking.component.ts");
-/* harmony import */ var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dashboard/room/room.component */ "./src/app/dashboard/room/room.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./dashboard/payment-history/payment-history.component */ "./src/app/dashboard/payment-history/payment-history.component.ts");
+/* harmony import */ var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard/room/room.component */ "./src/app/dashboard/room/room.component.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
+/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
 
 
@@ -463,17 +489,17 @@ const routes = [{
                 path: "profile",
                 component: _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"]
             }, {
-                path: "booking-history",
-                component: _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_9__["BookingComponent"]
+                path: "funds",
+                component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__["FundsComponent"]
             }, {
-                path: "payment-history",
-                component: _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_12__["PaymentHistoryComponent"]
+                path: "raiser",
+                component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__["FundRaiserComponent"]
             }, {
                 path: "room",
-                component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_10__["RoomComponent"]
+                component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__["RoomComponent"]
             }, {
                 path: "",
-                redirectTo: "/booking-history",
+                redirectTo: "/funds",
                 pathMatch: "full"
             }],
         canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AuthGuardService"]]
@@ -482,7 +508,7 @@ const routes = [{
         component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     }, {
         path: "register",
-        component: _register_register_component__WEBPACK_IMPORTED_MODULE_11__["RegisterComponent"]
+        component: _register_register_component__WEBPACK_IMPORTED_MODULE_10__["RegisterComponent"]
     }, {
         path: "reset/:token",
         component: _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__["ResetComponent"]
@@ -581,6 +607,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./dashboard/booking/booking.component */ "./src/app/dashboard/booking/booking.component.ts");
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./dashboard/payment-history/payment-history.component */ "./src/app/dashboard/payment-history/payment-history.component.ts");
+/* harmony import */ var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./dashboard/funds/funds.component */ "./src/app/dashboard/funds/funds.component.ts");
+/* harmony import */ var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./dashboard/fund-raiser/fund-raiser.component */ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
+
+
 
 
 
@@ -619,6 +649,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__["BookingComponent"],
             _register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
             _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__["PaymentHistoryComponent"],
+            _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__["FundsComponent"],
+            _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__["FundRaiserComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -748,7 +780,7 @@ BookingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".sideIcon {\n    font-size: 25px;\n}\n\n.sideIconDefault {\n    width: 30px;\n}\n\n/*Imported Defaults for Navbar  */\n\n.navbar {\n    height: 70px;\n    padding: 5px;\n    padding-left: 0px;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 1);\n}\n\n.navbar-brand {\n    padding: 0px;\n    margin-right: 15px;\n}\n\n.navbar>.container-fluid {\n    height: 60px;\n}\n\n.navbar-nav {\n    height: 30px;\n}\n\n.navbar-nav>li>a:hover {\n    font-size: 16px;\n    background: rgba(196, 172, 132, 0.7);\n    border-radius: 2px;\n    color: white;\n}\n\n.navbar-nav>li>a {\n    color: rgba(196, 172, 132);\n    font-size: 15px;\n}\n\n.navbar-nav>li>.active {\n    background: rgba(196, 172, 132);\n    border-radius: 2px;\n    color: white;\n    font-weight: bold;\n}\n\n.navbar>.container-fluid>.navbar-collapse {\n    padding: 5px;\n    padding-left: 0px;\n}\n\n.logoHolder {\n    text-align: center;\n    padding: 0px;\n    overflow: hidden;\n    padding-right: 5px;\n    padding-left: 5px;\n    cursor: pointer;\n    max-width: 280px;\n    height: 62px;\n    display: inline-block;\n}\n\n.logoHolder>img {\n    height: 100%;\n    width: auto;\n    max-width: 100%;\n}\n\n.logoHolder>a {\n    background: transparent;\n    color: rgba(196, 172, 132);\n    font-size: 25px;\n    height: 45px;\n    border-radius: 2px;\n    margin-right: 0px;\n}\n\n.topSpan {\n    font-size: 20px;\n}\n\n.logoHolder>a:hover {\n    color: white;\n    background: rgba(196, 172, 132, 0.7);\n}\n\n.navbar-brand>.textGradient {\n    font-family: 'Times New Roman', Times, serif;\n    font-size: 20px;\n}\n\n.stretch {\n    height: 75px;\n    background: white;\n}\n\n.contentBox {\n    min-height: 100px;\n    width: calc(100% - 70px);\n    margin-left: 70px;\n    margin-top: 70px;\n    padding: 10px;\n}\n\n.contentWall {\n    width: calc(100% - 207px);\n    margin-left: 207px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFHQSxpQ0FBaUM7O0FBRWpDO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsdUJBQXVCO0lBQ3ZCLHdDQUF3QztBQUM1Qzs7QUFFQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixvQ0FBb0M7SUFDcEMsa0JBQWtCO0lBQ2xCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSwwQkFBMEI7SUFDMUIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLCtCQUErQjtJQUMvQixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QiwwQkFBMEI7SUFDMUIsZUFBZTtJQUNmLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixvQ0FBb0M7QUFDeEM7O0FBRUE7SUFDSSw0Q0FBNEM7SUFDNUMsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZUljb24ge1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbn1cblxuLnNpZGVJY29uRGVmYXVsdCB7XG4gICAgd2lkdGg6IDMwcHg7XG59XG5cblxuLypJbXBvcnRlZCBEZWZhdWx0cyBmb3IgTmF2YmFyICAqL1xuXG4ubmF2YmFyIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi5uYXZiYXItYnJhbmQge1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XG59XG5cbi5uYXZiYXI+LmNvbnRhaW5lci1mbHVpZCB7XG4gICAgaGVpZ2h0OiA2MHB4O1xufVxuXG4ubmF2YmFyLW5hdiB7XG4gICAgaGVpZ2h0OiAzMHB4O1xufVxuXG4ubmF2YmFyLW5hdj5saT5hOmhvdmVyIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyLCAwLjcpO1xuICAgIGJvcmRlci1yYWRpdXM6IDJweDtcbiAgICBjb2xvcjogd2hpdGU7XG59XG5cbi5uYXZiYXItbmF2PmxpPmEge1xuICAgIGNvbG9yOiByZ2JhKDE5NiwgMTcyLCAxMzIpO1xuICAgIGZvbnQtc2l6ZTogMTVweDtcbn1cblxuLm5hdmJhci1uYXY+bGk+LmFjdGl2ZSB7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyKTtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ubmF2YmFyPi5jb250YWluZXItZmx1aWQ+Lm5hdmJhci1jb2xsYXBzZSB7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xufVxuXG4ubG9nb0hvbGRlciB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgbWF4LXdpZHRoOiAyODBweDtcbiAgICBoZWlnaHQ6IDYycHg7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4ubG9nb0hvbGRlcj5pbWcge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG5cbi5sb2dvSG9sZGVyPmEge1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGNvbG9yOiByZ2JhKDE5NiwgMTcyLCAxMzIpO1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbiAgICBoZWlnaHQ6IDQ1cHg7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIG1hcmdpbi1yaWdodDogMHB4O1xufVxuXG4udG9wU3BhbiB7XG4gICAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4ubG9nb0hvbGRlcj5hOmhvdmVyIHtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyLCAwLjcpO1xufVxuXG4ubmF2YmFyLWJyYW5kPi50ZXh0R3JhZGllbnQge1xuICAgIGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgVGltZXMsIHNlcmlmO1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuLnN0cmV0Y2gge1xuICAgIGhlaWdodDogNzVweDtcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbn1cblxuLmNvbnRlbnRCb3gge1xuICAgIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA3MHB4KTtcbiAgICBtYXJnaW4tbGVmdDogNzBweDtcbiAgICBtYXJnaW4tdG9wOiA3MHB4O1xuICAgIHBhZGRpbmc6IDEwcHg7XG59XG5cbi5jb250ZW50V2FsbCB7XG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIwN3B4KTtcbiAgICBtYXJnaW4tbGVmdDogMjA3cHg7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".sideIcon {\n    font-size: 25px;\n}\n\n.sideIconDefault {\n    width: 30px;\n}\n\n/*Imported Defaults for Navbar  */\n\n.navbar {\n    height: 70px;\n    padding: 5px;\n    padding-left: 0px;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 1);\n}\n\n.navbar-brand {\n    padding: 0px;\n    margin-right: 15px;\n}\n\n.navbar>.container-fluid {\n    height: 60px;\n}\n\n.navbar-nav {\n    height: 30px;\n}\n\n.navbar-nav>li>a:hover {\n    font-size: 16px;\n    background: rgba(0, 32, 67, 0.7);\n    border-radius: 2px;\n    color: white;\n}\n\n.navbar-nav>li>a {\n    color: rgba(0, 32, 67);\n    font-size: 15px;\n}\n\n.navbar-nav>li>.active {\n    background: rgba(0, 32, 67);\n    border-radius: 2px;\n    color: white;\n    font-weight: bold;\n}\n\n.navbar>.container-fluid>.navbar-collapse {\n    padding: 5px;\n    padding-left: 0px;\n}\n\n.logoHolder {\n    text-align: center;\n    padding: 0px;\n    overflow: hidden;\n    padding-right: 5px;\n    padding-left: 5px;\n    cursor: pointer;\n    max-width: 280px;\n    height: 62px;\n    display: inline-block;\n}\n\n.logoHolder>img {\n    height: 100%;\n    width: auto;\n    max-width: 100%;\n}\n\n.logoHolder>a {\n    background: transparent;\n    color: rgba(0, 32, 67);\n    font-size: 25px;\n    height: 45px;\n    border-radius: 2px;\n    margin-right: 0px;\n}\n\n.topSpan {\n    font-size: 20px;\n}\n\n.logoHolder>a:hover {\n    color: white;\n    background: rgba(0, 32, 67, 0.7);\n}\n\n.navbar-brand>.textGradient {\n    font-family: 'Times New Roman', Times, serif;\n    font-size: 20px;\n}\n\n.stretch {\n    height: 75px;\n    background: white;\n}\n\n.contentBox {\n    min-height: 100px;\n    width: calc(100% - 70px);\n    margin-left: 70px;\n    margin-top: 70px;\n    padding: 10px;\n}\n\n.contentWall {\n    width: calc(100% - 207px);\n    margin-left: 207px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFHQSxpQ0FBaUM7O0FBRWpDO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsdUJBQXVCO0lBQ3ZCLHdDQUF3QztBQUM1Qzs7QUFFQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixnQ0FBZ0M7SUFDaEMsa0JBQWtCO0lBQ2xCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLDJCQUEyQjtJQUMzQixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixnQ0FBZ0M7QUFDcEM7O0FBRUE7SUFDSSw0Q0FBNEM7SUFDNUMsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZUljb24ge1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbn1cblxuLnNpZGVJY29uRGVmYXVsdCB7XG4gICAgd2lkdGg6IDMwcHg7XG59XG5cblxuLypJbXBvcnRlZCBEZWZhdWx0cyBmb3IgTmF2YmFyICAqL1xuXG4ubmF2YmFyIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi5uYXZiYXItYnJhbmQge1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XG59XG5cbi5uYXZiYXI+LmNvbnRhaW5lci1mbHVpZCB7XG4gICAgaGVpZ2h0OiA2MHB4O1xufVxuXG4ubmF2YmFyLW5hdiB7XG4gICAgaGVpZ2h0OiAzMHB4O1xufVxuXG4ubmF2YmFyLW5hdj5saT5hOmhvdmVyIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgwLCAzMiwgNjcsIDAuNyk7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLm5hdmJhci1uYXY+bGk+YSB7XG4gICAgY29sb3I6IHJnYmEoMCwgMzIsIDY3KTtcbiAgICBmb250LXNpemU6IDE1cHg7XG59XG5cbi5uYXZiYXItbmF2PmxpPi5hY3RpdmUge1xuICAgIGJhY2tncm91bmQ6IHJnYmEoMCwgMzIsIDY3KTtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ubmF2YmFyPi5jb250YWluZXItZmx1aWQ+Lm5hdmJhci1jb2xsYXBzZSB7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xufVxuXG4ubG9nb0hvbGRlciB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgbWF4LXdpZHRoOiAyODBweDtcbiAgICBoZWlnaHQ6IDYycHg7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4ubG9nb0hvbGRlcj5pbWcge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG5cbi5sb2dvSG9sZGVyPmEge1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGNvbG9yOiByZ2JhKDAsIDMyLCA2Nyk7XG4gICAgZm9udC1zaXplOiAyNXB4O1xuICAgIGhlaWdodDogNDVweDtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgbWFyZ2luLXJpZ2h0OiAwcHg7XG59XG5cbi50b3BTcGFuIHtcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbi5sb2dvSG9sZGVyPmE6aG92ZXIge1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDMyLCA2NywgMC43KTtcbn1cblxuLm5hdmJhci1icmFuZD4udGV4dEdyYWRpZW50IHtcbiAgICBmb250LWZhbWlseTogJ1RpbWVzIE5ldyBSb21hbicsIFRpbWVzLCBzZXJpZjtcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbi5zdHJldGNoIHtcbiAgICBoZWlnaHQ6IDc1cHg7XG4gICAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi5jb250ZW50Qm94IHtcbiAgICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gNzBweCk7XG4gICAgbWFyZ2luLWxlZnQ6IDcwcHg7XG4gICAgbWFyZ2luLXRvcDogNzBweDtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuXG4uY29udGVudFdhbGwge1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyMDdweCk7XG4gICAgbWFyZ2luLWxlZnQ6IDIwN3B4O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -780,16 +812,10 @@ let DashboardComponent = class DashboardComponent {
         this.rightSideBar = false;
     }
     ngOnInit() {
-        if (this.router.url.toString().includes("operations"))
-            this.highlight("operations");
-        else if (this.router.url.toString().includes("division"))
-            this.highlight("division");
-        else if (this.router.url.toString().includes("outlets"))
-            this.highlight("outlets");
-        else if (this.router.url.toString().includes("forms"))
-            this.highlight("forms");
-        else if (this.router.url.toString().includes("icons"))
-            this.highlight("icons");
+        if (this.router.url.toString().includes("raiser"))
+            this.highlight("raiser");
+        else if (this.router.url.toString().includes("funds"))
+            this.highlight("funds");
     }
     toggleSideBar() {
         this.sideBar = !this.sideBar;
@@ -832,6 +858,250 @@ DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")).default]
     })
 ], DashboardComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard/fund-raiser/fund-raiser.component.css":
+/*!*****************************************************************!*\
+  !*** ./src/app/dashboard/fund-raiser/fund-raiser.component.css ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9mdW5kLXJhaXNlci9mdW5kLXJhaXNlci5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/dashboard/fund-raiser/fund-raiser.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/dashboard/fund-raiser/fund-raiser.component.ts ***!
+  \****************************************************************/
+/*! exports provided: FundRaiserComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FundRaiserComponent", function() { return FundRaiserComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/loader/loader.component */ "./src/app/loader/loader.component.ts");
+/* harmony import */ var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/api/api.service */ "./src/app/services/api/api.service.ts");
+/* harmony import */ var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/notification-bot/bot.service */ "./src/app/services/notification-bot/bot.service.ts");
+
+
+
+
+
+
+let FundRaiserComponent = class FundRaiserComponent {
+    constructor(formBuilder, api, bot) {
+        this.formBuilder = formBuilder;
+        this.api = api;
+        this.bot = bot;
+        this.funds = [];
+        this.form = this.formBuilder.group({
+            amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            reason: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    ngOnInit() {
+        this.list();
+    }
+    list() {
+        this.loader.load();
+        this.api.listFundRaisers().subscribe(response => {
+            this.loader.resume();
+            this.api.validateResponse(response, data => {
+                this.funds = data;
+            }, error => {
+                this.bot.fail(error);
+            });
+        });
+    }
+    validateAndAdd() {
+        if (this.form.get('amount').value == "")
+            this.bot.fail("Please enter a valid amount !");
+        else if (this.form.get('remarks').value == "")
+            this.bot.fail("Please enter a valid remarks !");
+        else if (this.form.get('reason').value == "")
+            this.bot.fail("Please enter a valid reason !");
+        else
+            this.addFundsRaiser();
+    }
+    addFundsRaiser() {
+        let funds = this.form.value;
+        funds.deposit = true;
+        this.loader.load();
+        this.api.addFundRaiser(funds).subscribe(response => {
+            this.loader.resume();
+            this.api.validateResponse(response, data => {
+                this.funds.push(data);
+                this.form.reset();
+                this.bot.success("Funds Added!");
+            }, error => {
+                this.bot.fail(error);
+            });
+        });
+    }
+};
+FundRaiserComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"] },
+    { type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__["BotService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__["LoaderComponent"], { static: true })
+], FundRaiserComponent.prototype, "loader", void 0);
+FundRaiserComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-fund-raiser',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./fund-raiser.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./fund-raiser.component.css */ "./src/app/dashboard/fund-raiser/fund-raiser.component.css")).default]
+    })
+], FundRaiserComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard/funds/funds.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/dashboard/funds/funds.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9mdW5kcy9mdW5kcy5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/dashboard/funds/funds.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/dashboard/funds/funds.component.ts ***!
+  \****************************************************/
+/*! exports provided: FundsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FundsComponent", function() { return FundsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/loader/loader.component */ "./src/app/loader/loader.component.ts");
+/* harmony import */ var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/api/api.service */ "./src/app/services/api/api.service.ts");
+/* harmony import */ var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/notification-bot/bot.service */ "./src/app/services/notification-bot/bot.service.ts");
+
+
+
+
+
+
+let FundsComponent = class FundsComponent {
+    constructor(formBuilder, api, bot) {
+        this.formBuilder = formBuilder;
+        this.api = api;
+        this.bot = bot;
+        this.funds = [];
+        this.form = this.formBuilder.group({
+            amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.utForm = this.formBuilder.group({
+            amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    ngOnInit() {
+        this.list();
+    }
+    list() {
+        this.loader.load();
+        this.api.listFunds().subscribe(response => {
+            this.loader.resume();
+            this.api.validateResponse(response, data => {
+                this.funds = data;
+            }, error => {
+                this.bot.fail(error);
+            });
+        });
+    }
+    validateAndAdd() {
+        if (this.form.get('amount').value == "")
+            this.bot.fail("Please enter a valid amount !");
+        else if (this.form.get('remarks').value == "")
+            this.bot.fail("Please enter a valid remarks !");
+        else if (this.form.get('name').value == "")
+            this.bot.fail("Please enter a valid name !");
+        else
+            this.addFunds();
+    }
+    validateAndUtilize() {
+        if (this.utForm.get('amount').value == "")
+            this.bot.fail("Please enter a valid amount !");
+        else if (this.utForm.get('remarks').value == "")
+            this.bot.fail("Please enter a valid remarks !");
+        else if (this.utForm.get('name').value == "")
+            this.bot.fail("Please enter a valid name !");
+        else
+            this.utilizeFunds();
+    }
+    addFunds() {
+        let funds = this.form.value;
+        funds.deposit = true;
+        this.loader.load();
+        this.api.addFunds(funds).subscribe(response => {
+            this.loader.resume();
+            this.api.validateResponse(response, data => {
+                this.funds.push(data);
+                this.form.reset();
+                this.bot.success("Funds Added!");
+            }, error => {
+                this.bot.fail(error);
+            });
+        });
+    }
+    utilizeFunds() {
+        let funds = this.utForm.value;
+        funds.deposit = false;
+        this.loader.load();
+        this.api.addFunds(funds).subscribe(response => {
+            this.loader.resume();
+            this.api.validateResponse(response, data => {
+                this.funds.push(data);
+                this.utForm.reset();
+                this.bot.success("Funds Utilized!");
+            }, error => {
+                this.bot.fail(error);
+            });
+        });
+    }
+};
+FundsComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"] },
+    { type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__["BotService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__["LoaderComponent"], { static: true })
+], FundsComponent.prototype, "loader", void 0);
+FundsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-funds',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./funds.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./funds.component.css */ "./src/app/dashboard/funds/funds.component.css")).default]
+    })
+], FundsComponent);
 
 
 
@@ -1653,10 +1923,24 @@ class ApiService {
         this.SIGNUP_URL = this.HOST + "/signUp";
         this.LOOKUP_URL = this.HOST + "/lookup";
         this.PROFILE_URL = this.SECURE + "/profile";
+        this.FUNDS_URL = this.SECURE + "/funds";
+        this.FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
         this.BOOKING_URL = this.SECURE + "/booking";
         this.ROOM_URL = this.SECURE + "/room";
         this.FORGOT_URL = this.HOST + "/public/forgot";
         this.RESET_URL = this.HOST + "/public/reset";
+    }
+    addFunds(funds) {
+        return this.http.post(this.FUNDS_URL, funds);
+    }
+    addFundRaiser(fundRaiser) {
+        return this.http.post(this.FUND_RAISER_URL, fundRaiser);
+    }
+    listFunds() {
+        return this.http.get(this.FUNDS_URL);
+    }
+    listFundRaisers() {
+        return this.http.get(this.FUND_RAISER_URL);
     }
     book(booking) {
         return this.http.post(this.BOOKING_URL, booking);

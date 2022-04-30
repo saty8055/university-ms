@@ -25,17 +25,13 @@
 
 <!-- SideBar -->
 <div class="sideBar boxed" [class.sideBarOpen]="sideBar" style="z-index:100">
-    <a [class.active]="key=='booking-history'" (click)="activate('booking-history')" [class.centered]="!sideBar" tooltip="Booking History" placement="right" show-delay="200">
+    <a [class.active]="key=='funds'" (click)="activate('funds')" [class.centered]="!sideBar" tooltip="Funds" placement="right" show-delay="200">
         <span class="sideIcon fa fa-calendar" *ngIf="!sideBarMenu"></span>
-        <span *ngIf="sideBarMenu" class="fullLength"> <span class="sideIconDefault fa fa-calendar"></span> Booking History</span>
+        <span *ngIf="sideBarMenu" class="fullLength"> <span class="sideIconDefault fa fa-usd"></span> Funds</span>
     </a>
-    <a [class.active]="key=='payment-history'" (click)="activate('payment-history')" [class.centered]="!sideBar" tooltip="payment History" placement="right" show-delay="200">
+    <a [class.active]="key=='raiser'" (click)="activate('raiser')" [class.centered]="!sideBar" tooltip="Fund Raisers" placement="right" show-delay="200">
         <span class="sideIcon fa fa-calendar" *ngIf="!sideBarMenu"></span>
-        <span *ngIf="sideBarMenu" class="fullLength"> <span class="sideIconDefault fa fa-calendar"></span> Payment History</span>
-    </a>
-    <a [class.active]="key=='room'" (click)="activate('room')" [class.centered]="!sideBar" tooltip="Rooms" placement="right" show-delay="200">
-        <span class="sideIcon fa fa-list" *ngIf="!sideBarMenu"></span>
-        <span *ngIf="sideBarMenu" class="fullLength"> <span class="sideIconDefault fa fa-list"></span>Rooms</span>
+        <span *ngIf="sideBarMenu" class="fullLength"> <span class="sideIconDefault fa fa-calendar"></span>Fund Raisers</span>
     </a>
 </div>
 

@@ -20,6 +20,8 @@ import { RoomComponent } from './dashboard/room/room.component';
 import { BookingComponent } from './dashboard/booking/booking.component';
 import { RegisterComponent } from './register/register.component';
 import { PaymentHistoryComponent } from './dashboard/payment-history/payment-history.component';
+import { FundsComponent } from './dashboard/funds/funds.component';
+import { FundRaiserComponent } from './dashboard/fund-raiser/fund-raiser.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { PaymentHistoryComponent } from './dashboard/payment-history/payment-his
     BookingComponent,
     RegisterComponent,
     PaymentHistoryComponent,
+    FundsComponent,
+    FundRaiserComponent,
   ],
   imports: [
     BrowserModule,

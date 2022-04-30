@@ -6,6 +6,10 @@ public interface Url {
 
 	String BOOKING = "/booking";
 
+	String FUNDS = "/funds";
+
+	String RAISER = "/raiser";
+
 	String PUBLIC = "/public";
 
 	String PROFILE = "/profile";

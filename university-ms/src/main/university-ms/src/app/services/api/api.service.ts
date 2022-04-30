@@ -25,6 +25,10 @@ export class ApiService {
 
   private PROFILE_URL = this.SECURE + "/profile";
 
+  private FUNDS_URL = this.SECURE + "/funds";
+
+  private FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
+
   private BOOKING_URL = this.SECURE + "/booking";
 
   private ROOM_URL = this.SECURE + "/room";
@@ -32,6 +36,22 @@ export class ApiService {
   private FORGOT_URL = this.HOST + "/public/forgot";
 
   private RESET_URL = this.HOST + "/public/reset";
+
+  public addFunds(funds:any): Observable<any> {
+    return this.http.post(this.FUNDS_URL, funds);
+  }
+
+  public addFundRaiser(fundRaiser:any): Observable<any> {
+    return this.http.post(this.FUND_RAISER_URL, fundRaiser);
+  }
+
+  public listFunds():Observable<any> {
+    return this.http.get(this.FUNDS_URL);
+  }
+
+  public listFundRaisers():Observable<any> {
+    return this.http.get(this.FUND_RAISER_URL);
+  }
 
   public book(booking:any): Observable<any> {
     return this.http.post(this.BOOKING_URL, booking);

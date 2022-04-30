@@ -12,16 +12,10 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router, private bot: BotService) { }
 
   ngOnInit() {
-    if (this.router.url.toString().includes("operations"))
-      this.highlight("operations");
-    else if (this.router.url.toString().includes("division"))
-      this.highlight("division");
-    else if (this.router.url.toString().includes("outlets"))
-      this.highlight("outlets");
-    else if (this.router.url.toString().includes("forms"))
-      this.highlight("forms");
-    else if (this.router.url.toString().includes("icons"))
-      this.highlight("icons");
+    if (this.router.url.toString().includes("raiser"))
+      this.highlight("raiser");
+    else if (this.router.url.toString().includes("funds"))
+      this.highlight("funds");
   }
 
   sideBar: boolean = true;

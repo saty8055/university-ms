@@ -91,7 +91,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<!-- Topbar -->\n<nav class=\"navbar navbar-fixed-top boxed\" style=\"z-index:10\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle topSpan\" (click)=\"toggleRightBar()\">\n                <span class=\"fa fa-user-circle\"></span>\n            </button>\n            <div class=\"navbar-brand\">\n                <div class=\"logoHolder\">\n                    <a class=\"btn\" (click)=\"toggleSideBar()\" [tooltip]=\"sideBar ? 'Hide Sidebar' : 'Open SideBar'\" placement=\"right\" show-delay=\"200\"><span class=\"fa fa-bars\"></span> </a>\n                    <img src=\"/assets/logoTagThumb.png\" style=\"cursor: none;\">\n                </div>\n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\"><i class=\"fa fa-user-circle-o\"></i> Profile</a></li>\n                <li><a (click)=\"logout()\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- SideBar -->\n<div class=\"sideBar boxed\" [class.sideBarOpen]=\"sideBar\" style=\"z-index:100\">\n    <a [class.active]=\"key=='booking-history'\" (click)=\"activate('booking-history')\" [class.centered]=\"!sideBar\" tooltip=\"Booking History\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span> Booking History</span>\n    </a>\n    <a [class.active]=\"key=='payment-history'\" (click)=\"activate('payment-history')\" [class.centered]=\"!sideBar\" tooltip=\"payment History\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span> Payment History</span>\n    </a>\n    <a [class.active]=\"key=='room'\" (click)=\"activate('room')\" [class.centered]=\"!sideBar\" tooltip=\"Rooms\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-list\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-list\"></span>Rooms</span>\n    </a>\n</div>\n\n<!-- Right SideBar -->\n<div class=\"rightSideBar\" [class.rightSideBarOpen]=\"rightSideBar\" style=\"z-index:100\">\n    <a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-user-circle-o\"></span> Profile</span>\n    </a>\n    <a (click)=\"logout()\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-power-off\"></span>Logout</span>\n    </a>\n</div>\n\n<div class=\"contentBox\" [class.contentWall]=\"sideBar\">\n    <router-outlet></router-outlet>\n</div>";
+    __webpack_exports__["default"] = "<!-- Topbar -->\n<nav class=\"navbar navbar-fixed-top boxed\" style=\"z-index:10\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle topSpan\" (click)=\"toggleRightBar()\">\n                <span class=\"fa fa-user-circle\"></span>\n            </button>\n            <div class=\"navbar-brand\">\n                <div class=\"logoHolder\">\n                    <a class=\"btn\" (click)=\"toggleSideBar()\" [tooltip]=\"sideBar ? 'Hide Sidebar' : 'Open SideBar'\" placement=\"right\" show-delay=\"200\"><span class=\"fa fa-bars\"></span> </a>\n                    <img src=\"/assets/logo.png\" style=\"cursor: none;\">\n                    <a class=\"btn\" [tooltip]=\"sideBar ? 'University MS' : 'University MS'\" placement=\"right\" show-delay=\"200\" style=\"font-family: serif;\">UMS </a>\n                </div>\n                \n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\"><i class=\"fa fa-user-circle-o\"></i> Profile</a></li>\n                <li><a (click)=\"logout()\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- SideBar -->\n<div class=\"sideBar boxed\" [class.sideBarOpen]=\"sideBar\" style=\"z-index:100\">\n    <a [class.active]=\"key=='funds'\" (click)=\"activate('funds')\" [class.centered]=\"!sideBar\" tooltip=\"Funds\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-usd\"></span> Funds</span>\n    </a>\n    <a [class.active]=\"key=='raiser'\" (click)=\"activate('raiser')\" [class.centered]=\"!sideBar\" tooltip=\"Fund Raisers\" placement=\"right\" show-delay=\"200\">\n        <span class=\"sideIcon fa fa-calendar\" *ngIf=\"!sideBarMenu\"></span>\n        <span *ngIf=\"sideBarMenu\" class=\"fullLength\"> <span class=\"sideIconDefault fa fa-calendar\"></span>Fund Raisers</span>\n    </a>\n</div>\n\n<!-- Right SideBar -->\n<div class=\"rightSideBar\" [class.rightSideBarOpen]=\"rightSideBar\" style=\"z-index:100\">\n    <a (click)=\"activate('profile')\" [class.active]=\"key=='profile'\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-user-circle-o\"></span> Profile</span>\n    </a>\n    <a (click)=\"logout()\">\n        <span class=\"fullLength\"> <span class=\"sideIconDefault fa fa-power-off\"></span>Logout</span>\n    </a>\n</div>\n\n<div class=\"contentBox\" [class.contentWall]=\"sideBar\">\n    <router-outlet></router-outlet>\n</div>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html":
+  /*!********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html ***!
+    \********************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDashboardFundRaiserFundRaiserComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#addFunds\"><span class=\"fa fa-plus\"></span> Add Fund Raiser Event</button></th>\n        </tr>\n    </thead>\n</table>\n\n\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Event ID</th>\n                <th class=\"centered\">Amount</th>\n                <th class=\"centered\">Reason</th>\n                <th class=\"centered\">Remarks</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of funds; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.fundRaiserId}}</td>\n                <td>{{record.amount| number :'.2-2'}}</td>\n                <td>{{record.reason}}</td>\n                <td>{{record.remarks}}</td>\n            </tr>\n            <tr *ngIf=\"funds.length <1 \">\n                <th colspan=\"5\">No Record found</th>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"addFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Add Funds !</h4>\n            </div>\n            <form [formGroup]=\"form\" (ngSubmit)=\"validateAndAdd()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"reason\" type=\"text\" class=\"form-control\" formControlName=\"reason\"\n                            placeholder=\"Reason\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndAdd()\">Add Fund Raiser</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n\n<app-loader></app-loader>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html":
+  /*!********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html ***!
+    \********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDashboardFundsFundsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<table class=\"table table-condensed\">\n    <thead>\n        <tr>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#addFunds\"><span class=\"fa fa-plus\"></span> Add Funds</button></th>\n            <th><button class=\"btn btnPrime fullCover\" data-toggle=\"modal\" data-target=\"#utilizeFunds\"><span class=\"fa fa-eye\"></span> Utilize Funds</button></th>\n        </tr>\n    </thead>\n</table>\n\n\n<div class=\"table-responsive\">\n    <table class=\"table table-condensed table-bordered\">\n        <thead>\n            <tr>\n                <th class=\"centered indexCell matchDouble\">#</th>\n                <th class=\"extendedCell matchDouble\">Transaction ID</th>\n                <th class=\"centered\">Amount</th>\n                <th class=\"centered\">Name</th>\n                <th class=\"centered\">Remarks</th>\n                <th class=\"centered\">Action</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let record of funds; let i=index;\">\n                <th>{{i+1}}</th>\n                <td>{{record.fundId}}</td>\n                <td>{{record.amount| number :'.2-2'}}</td>\n                <td>{{record.name}}</td>\n                <td>{{record.remarks}}</td>\n                <td>{{record.deposit? 'Deposited' : 'Utilized'}}</td>\n            </tr>\n            <tr *ngIf=\"funds.length <1 \">\n                <th colspan=\"6\">No Record found</th>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"addFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Add Funds !</h4>\n            </div>\n            <form [formGroup]=\"form\" (ngSubmit)=\"validateAndAdd()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-user-circle\"></i></span>\n                        <input id=\"fullName\" type=\"text\" class=\"form-control\" formControlName=\"name\"\n                            placeholder=\"Full Name\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndAdd()\">Add Funds</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"utilizeFunds\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content boxed\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title heading\">Utilize Funds !</h4>\n            </div>\n            <form [formGroup]=\"utForm\" (ngSubmit)=\"validateAndUtilize()\">\n                <div class=\"modal-body\">\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-usd\"></i></span>\n                        <input id=\"amount\" type=\"number\" class=\"form-control\" formControlName=\"amount\"\n                            placeholder=\"Amount\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-info\"></i></span>\n                        <input id=\"remarks\" type=\"text\" class=\"form-control\" formControlName=\"remarks\"\n                            placeholder=\"Remarks\">\n                    </div>\n                    <div class=\"input-group\">\n                        <span class=\"input-group-addon\"><i class=\"fa fa-user-circle\"></i></span>\n                        <input id=\"fullName\" type=\"text\" class=\"form-control\" formControlName=\"name\"\n                            placeholder=\"Full Name\">\n                    </div>\n                </div>\n                <div class=\"modal-footer centered\">\n                    <button type=\"button\" class=\"btn\" data-dismiss=\"modal\" (click)=\"validateAndUtilize()\">Utilize Funds</button>\n                </div>\n            </form>\n        </div>\n\n    </div>\n</div>\n\n<app-loader></app-loader>";
     /***/
   },
 
@@ -935,27 +975,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ./dashboard/booking/booking.component */
-    "./src/app/dashboard/booking/booking.component.ts");
-    /* harmony import */
-
-
-    var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./dashboard/room/room.component */
     "./src/app/dashboard/room/room.component.ts");
     /* harmony import */
 
 
-    var _register_register_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _register_register_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./register/register.component */
     "./src/app/register/register.component.ts");
     /* harmony import */
 
 
-    var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-    /*! ./dashboard/payment-history/payment-history.component */
-    "./src/app/dashboard/payment-history/payment-history.component.ts");
+    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./dashboard/funds/funds.component */
+    "./src/app/dashboard/funds/funds.component.ts");
+    /* harmony import */
+
+
+    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./dashboard/fund-raiser/fund-raiser.component */
+    "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
     var routes = [{
       path: "",
@@ -964,17 +1004,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         path: "profile",
         component: _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"]
       }, {
-        path: "booking-history",
-        component: _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_9__["BookingComponent"]
+        path: "funds",
+        component: _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_11__["FundsComponent"]
       }, {
-        path: "payment-history",
-        component: _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_12__["PaymentHistoryComponent"]
+        path: "raiser",
+        component: _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_12__["FundRaiserComponent"]
       }, {
         path: "room",
-        component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_10__["RoomComponent"]
+        component: _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_9__["RoomComponent"]
       }, {
         path: "",
-        redirectTo: "/booking-history",
+        redirectTo: "/funds",
         pathMatch: "full"
       }],
       canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_4__["AuthGuardService"]]
@@ -983,7 +1023,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       component: _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"]
     }, {
       path: "register",
-      component: _register_register_component__WEBPACK_IMPORTED_MODULE_11__["RegisterComponent"]
+      component: _register_register_component__WEBPACK_IMPORTED_MODULE_10__["RegisterComponent"]
     }, {
       path: "reset/:token",
       component: _reset_reset_component__WEBPACK_IMPORTED_MODULE_8__["ResetComponent"]
@@ -1225,13 +1265,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! ./dashboard/payment-history/payment-history.component */
     "./src/app/dashboard/payment-history/payment-history.component.ts");
+    /* harmony import */
+
+
+    var _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    /*! ./dashboard/funds/funds.component */
+    "./src/app/dashboard/funds/funds.component.ts");
+    /* harmony import */
+
+
+    var _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    /*! ./dashboard/fund-raiser/fund-raiser.component */
+    "./src/app/dashboard/fund-raiser/fund-raiser.component.ts");
 
     var AppModule = /*#__PURE__*/_createClass(function AppModule() {
       _classCallCheck(this, AppModule);
     });
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"], _loader_loader_component__WEBPACK_IMPORTED_MODULE_13__["LoaderComponent"], _f04_f04_component__WEBPACK_IMPORTED_MODULE_14__["F04Component"], _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__["ProfileComponent"], _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__["ResetComponent"], _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__["RoomComponent"], _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__["BookingComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"], _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__["PaymentHistoryComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"], _loader_loader_component__WEBPACK_IMPORTED_MODULE_13__["LoaderComponent"], _f04_f04_component__WEBPACK_IMPORTED_MODULE_14__["F04Component"], _dashboard_profile_profile_component__WEBPACK_IMPORTED_MODULE_16__["ProfileComponent"], _reset_reset_component__WEBPACK_IMPORTED_MODULE_17__["ResetComponent"], _dashboard_room_room_component__WEBPACK_IMPORTED_MODULE_18__["RoomComponent"], _dashboard_booking_booking_component__WEBPACK_IMPORTED_MODULE_19__["BookingComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"], _dashboard_payment_history_payment_history_component__WEBPACK_IMPORTED_MODULE_21__["PaymentHistoryComponent"], _dashboard_funds_funds_component__WEBPACK_IMPORTED_MODULE_22__["FundsComponent"], _dashboard_fund_raiser_fund_raiser_component__WEBPACK_IMPORTED_MODULE_23__["FundRaiserComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], ng2_tooltip_directive__WEBPACK_IMPORTED_MODULE_11__["TooltipModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_9__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"]],
       providers: [_angular_common__WEBPACK_IMPORTED_MODULE_15__["DatePipe"], {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HTTP_INTERCEPTORS"],
@@ -1413,7 +1465,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".sideIcon {\n    font-size: 25px;\n}\n\n.sideIconDefault {\n    width: 30px;\n}\n\n/*Imported Defaults for Navbar  */\n\n.navbar {\n    height: 70px;\n    padding: 5px;\n    padding-left: 0px;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 1);\n}\n\n.navbar-brand {\n    padding: 0px;\n    margin-right: 15px;\n}\n\n.navbar>.container-fluid {\n    height: 60px;\n}\n\n.navbar-nav {\n    height: 30px;\n}\n\n.navbar-nav>li>a:hover {\n    font-size: 16px;\n    background: rgba(196, 172, 132, 0.7);\n    border-radius: 2px;\n    color: white;\n}\n\n.navbar-nav>li>a {\n    color: rgba(196, 172, 132);\n    font-size: 15px;\n}\n\n.navbar-nav>li>.active {\n    background: rgba(196, 172, 132);\n    border-radius: 2px;\n    color: white;\n    font-weight: bold;\n}\n\n.navbar>.container-fluid>.navbar-collapse {\n    padding: 5px;\n    padding-left: 0px;\n}\n\n.logoHolder {\n    text-align: center;\n    padding: 0px;\n    overflow: hidden;\n    padding-right: 5px;\n    padding-left: 5px;\n    cursor: pointer;\n    max-width: 280px;\n    height: 62px;\n    display: inline-block;\n}\n\n.logoHolder>img {\n    height: 100%;\n    width: auto;\n    max-width: 100%;\n}\n\n.logoHolder>a {\n    background: transparent;\n    color: rgba(196, 172, 132);\n    font-size: 25px;\n    height: 45px;\n    border-radius: 2px;\n    margin-right: 0px;\n}\n\n.topSpan {\n    font-size: 20px;\n}\n\n.logoHolder>a:hover {\n    color: white;\n    background: rgba(196, 172, 132, 0.7);\n}\n\n.navbar-brand>.textGradient {\n    font-family: 'Times New Roman', Times, serif;\n    font-size: 20px;\n}\n\n.stretch {\n    height: 75px;\n    background: white;\n}\n\n.contentBox {\n    min-height: 100px;\n    width: calc(100% - 70px);\n    margin-left: 70px;\n    margin-top: 70px;\n    padding: 10px;\n}\n\n.contentWall {\n    width: calc(100% - 207px);\n    margin-left: 207px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFHQSxpQ0FBaUM7O0FBRWpDO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsdUJBQXVCO0lBQ3ZCLHdDQUF3QztBQUM1Qzs7QUFFQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixvQ0FBb0M7SUFDcEMsa0JBQWtCO0lBQ2xCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSwwQkFBMEI7SUFDMUIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLCtCQUErQjtJQUMvQixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QiwwQkFBMEI7SUFDMUIsZUFBZTtJQUNmLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixvQ0FBb0M7QUFDeEM7O0FBRUE7SUFDSSw0Q0FBNEM7SUFDNUMsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZUljb24ge1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbn1cblxuLnNpZGVJY29uRGVmYXVsdCB7XG4gICAgd2lkdGg6IDMwcHg7XG59XG5cblxuLypJbXBvcnRlZCBEZWZhdWx0cyBmb3IgTmF2YmFyICAqL1xuXG4ubmF2YmFyIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi5uYXZiYXItYnJhbmQge1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XG59XG5cbi5uYXZiYXI+LmNvbnRhaW5lci1mbHVpZCB7XG4gICAgaGVpZ2h0OiA2MHB4O1xufVxuXG4ubmF2YmFyLW5hdiB7XG4gICAgaGVpZ2h0OiAzMHB4O1xufVxuXG4ubmF2YmFyLW5hdj5saT5hOmhvdmVyIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyLCAwLjcpO1xuICAgIGJvcmRlci1yYWRpdXM6IDJweDtcbiAgICBjb2xvcjogd2hpdGU7XG59XG5cbi5uYXZiYXItbmF2PmxpPmEge1xuICAgIGNvbG9yOiByZ2JhKDE5NiwgMTcyLCAxMzIpO1xuICAgIGZvbnQtc2l6ZTogMTVweDtcbn1cblxuLm5hdmJhci1uYXY+bGk+LmFjdGl2ZSB7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyKTtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ubmF2YmFyPi5jb250YWluZXItZmx1aWQ+Lm5hdmJhci1jb2xsYXBzZSB7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xufVxuXG4ubG9nb0hvbGRlciB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgbWF4LXdpZHRoOiAyODBweDtcbiAgICBoZWlnaHQ6IDYycHg7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4ubG9nb0hvbGRlcj5pbWcge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG5cbi5sb2dvSG9sZGVyPmEge1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGNvbG9yOiByZ2JhKDE5NiwgMTcyLCAxMzIpO1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbiAgICBoZWlnaHQ6IDQ1cHg7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIG1hcmdpbi1yaWdodDogMHB4O1xufVxuXG4udG9wU3BhbiB7XG4gICAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4ubG9nb0hvbGRlcj5hOmhvdmVyIHtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxOTYsIDE3MiwgMTMyLCAwLjcpO1xufVxuXG4ubmF2YmFyLWJyYW5kPi50ZXh0R3JhZGllbnQge1xuICAgIGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgVGltZXMsIHNlcmlmO1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuLnN0cmV0Y2gge1xuICAgIGhlaWdodDogNzVweDtcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbn1cblxuLmNvbnRlbnRCb3gge1xuICAgIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA3MHB4KTtcbiAgICBtYXJnaW4tbGVmdDogNzBweDtcbiAgICBtYXJnaW4tdG9wOiA3MHB4O1xuICAgIHBhZGRpbmc6IDEwcHg7XG59XG5cbi5jb250ZW50V2FsbCB7XG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIwN3B4KTtcbiAgICBtYXJnaW4tbGVmdDogMjA3cHg7XG59Il19 */";
+    __webpack_exports__["default"] = ".sideIcon {\n    font-size: 25px;\n}\n\n.sideIconDefault {\n    width: 30px;\n}\n\n/*Imported Defaults for Navbar  */\n\n.navbar {\n    height: 70px;\n    padding: 5px;\n    padding-left: 0px;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 1);\n}\n\n.navbar-brand {\n    padding: 0px;\n    margin-right: 15px;\n}\n\n.navbar>.container-fluid {\n    height: 60px;\n}\n\n.navbar-nav {\n    height: 30px;\n}\n\n.navbar-nav>li>a:hover {\n    font-size: 16px;\n    background: rgba(0, 32, 67, 0.7);\n    border-radius: 2px;\n    color: white;\n}\n\n.navbar-nav>li>a {\n    color: rgba(0, 32, 67);\n    font-size: 15px;\n}\n\n.navbar-nav>li>.active {\n    background: rgba(0, 32, 67);\n    border-radius: 2px;\n    color: white;\n    font-weight: bold;\n}\n\n.navbar>.container-fluid>.navbar-collapse {\n    padding: 5px;\n    padding-left: 0px;\n}\n\n.logoHolder {\n    text-align: center;\n    padding: 0px;\n    overflow: hidden;\n    padding-right: 5px;\n    padding-left: 5px;\n    cursor: pointer;\n    max-width: 280px;\n    height: 62px;\n    display: inline-block;\n}\n\n.logoHolder>img {\n    height: 100%;\n    width: auto;\n    max-width: 100%;\n}\n\n.logoHolder>a {\n    background: transparent;\n    color: rgba(0, 32, 67);\n    font-size: 25px;\n    height: 45px;\n    border-radius: 2px;\n    margin-right: 0px;\n}\n\n.topSpan {\n    font-size: 20px;\n}\n\n.logoHolder>a:hover {\n    color: white;\n    background: rgba(0, 32, 67, 0.7);\n}\n\n.navbar-brand>.textGradient {\n    font-family: 'Times New Roman', Times, serif;\n    font-size: 20px;\n}\n\n.stretch {\n    height: 75px;\n    background: white;\n}\n\n.contentBox {\n    min-height: 100px;\n    width: calc(100% - 70px);\n    margin-left: 70px;\n    margin-top: 70px;\n    padding: 10px;\n}\n\n.contentWall {\n    width: calc(100% - 207px);\n    margin-left: 207px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFHQSxpQ0FBaUM7O0FBRWpDO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsdUJBQXVCO0lBQ3ZCLHdDQUF3QztBQUM1Qzs7QUFFQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixnQ0FBZ0M7SUFDaEMsa0JBQWtCO0lBQ2xCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLDJCQUEyQjtJQUMzQixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixnQ0FBZ0M7QUFDcEM7O0FBRUE7SUFDSSw0Q0FBNEM7SUFDNUMsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsd0JBQXdCO0lBQ3hCLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZUljb24ge1xuICAgIGZvbnQtc2l6ZTogMjVweDtcbn1cblxuLnNpZGVJY29uRGVmYXVsdCB7XG4gICAgd2lkdGg6IDMwcHg7XG59XG5cblxuLypJbXBvcnRlZCBEZWZhdWx0cyBmb3IgTmF2YmFyICAqL1xuXG4ubmF2YmFyIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi5uYXZiYXItYnJhbmQge1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XG59XG5cbi5uYXZiYXI+LmNvbnRhaW5lci1mbHVpZCB7XG4gICAgaGVpZ2h0OiA2MHB4O1xufVxuXG4ubmF2YmFyLW5hdiB7XG4gICAgaGVpZ2h0OiAzMHB4O1xufVxuXG4ubmF2YmFyLW5hdj5saT5hOmhvdmVyIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgwLCAzMiwgNjcsIDAuNyk7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLm5hdmJhci1uYXY+bGk+YSB7XG4gICAgY29sb3I6IHJnYmEoMCwgMzIsIDY3KTtcbiAgICBmb250LXNpemU6IDE1cHg7XG59XG5cbi5uYXZiYXItbmF2PmxpPi5hY3RpdmUge1xuICAgIGJhY2tncm91bmQ6IHJnYmEoMCwgMzIsIDY3KTtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ubmF2YmFyPi5jb250YWluZXItZmx1aWQ+Lm5hdmJhci1jb2xsYXBzZSB7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIHBhZGRpbmctbGVmdDogMHB4O1xufVxuXG4ubG9nb0hvbGRlciB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDBweDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgbWF4LXdpZHRoOiAyODBweDtcbiAgICBoZWlnaHQ6IDYycHg7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4ubG9nb0hvbGRlcj5pbWcge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogYXV0bztcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG5cbi5sb2dvSG9sZGVyPmEge1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGNvbG9yOiByZ2JhKDAsIDMyLCA2Nyk7XG4gICAgZm9udC1zaXplOiAyNXB4O1xuICAgIGhlaWdodDogNDVweDtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgbWFyZ2luLXJpZ2h0OiAwcHg7XG59XG5cbi50b3BTcGFuIHtcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbi5sb2dvSG9sZGVyPmE6aG92ZXIge1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDMyLCA2NywgMC43KTtcbn1cblxuLm5hdmJhci1icmFuZD4udGV4dEdyYWRpZW50IHtcbiAgICBmb250LWZhbWlseTogJ1RpbWVzIE5ldyBSb21hbicsIFRpbWVzLCBzZXJpZjtcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbi5zdHJldGNoIHtcbiAgICBoZWlnaHQ6IDc1cHg7XG4gICAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi5jb250ZW50Qm94IHtcbiAgICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gNzBweCk7XG4gICAgbWFyZ2luLWxlZnQ6IDcwcHg7XG4gICAgbWFyZ2luLXRvcDogNzBweDtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuXG4uY29udGVudFdhbGwge1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyMDdweCk7XG4gICAgbWFyZ2luLWxlZnQ6IDIwN3B4O1xufSJdfQ== */";
     /***/
   },
 
@@ -1476,7 +1528,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(DashboardComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          if (this.router.url.toString().includes("operations")) this.highlight("operations");else if (this.router.url.toString().includes("division")) this.highlight("division");else if (this.router.url.toString().includes("outlets")) this.highlight("outlets");else if (this.router.url.toString().includes("forms")) this.highlight("forms");else if (this.router.url.toString().includes("icons")) this.highlight("icons");
+          if (this.router.url.toString().includes("raiser")) this.highlight("raiser");else if (this.router.url.toString().includes("funds")) this.highlight("funds");
         }
       }, {
         key: "toggleSideBar",
@@ -1542,6 +1594,376 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./dashboard.component.css */
       "./src/app/dashboard/dashboard.component.css"))["default"]]
     })], DashboardComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/dashboard/fund-raiser/fund-raiser.component.css":
+  /*!*****************************************************************!*\
+    !*** ./src/app/dashboard/fund-raiser/fund-raiser.component.css ***!
+    \*****************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDashboardFundRaiserFundRaiserComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9mdW5kLXJhaXNlci9mdW5kLXJhaXNlci5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/dashboard/fund-raiser/fund-raiser.component.ts":
+  /*!****************************************************************!*\
+    !*** ./src/app/dashboard/fund-raiser/fund-raiser.component.ts ***!
+    \****************************************************************/
+
+  /*! exports provided: FundRaiserComponent */
+
+  /***/
+  function srcAppDashboardFundRaiserFundRaiserComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FundRaiserComponent", function () {
+      return FundRaiserComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/loader/loader.component */
+    "./src/app/loader/loader.component.ts");
+    /* harmony import */
+
+
+    var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/api/api.service */
+    "./src/app/services/api/api.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/services/notification-bot/bot.service */
+    "./src/app/services/notification-bot/bot.service.ts");
+
+    var FundRaiserComponent = /*#__PURE__*/function () {
+      function FundRaiserComponent(formBuilder, api, bot) {
+        _classCallCheck(this, FundRaiserComponent);
+
+        this.formBuilder = formBuilder;
+        this.api = api;
+        this.bot = bot;
+        this.funds = [];
+        this.form = this.formBuilder.group({
+          amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          reason: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+      }
+
+      _createClass(FundRaiserComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.list();
+        }
+      }, {
+        key: "list",
+        value: function list() {
+          var _this4 = this;
+
+          this.loader.load();
+          this.api.listFundRaisers().subscribe(function (response) {
+            _this4.loader.resume();
+
+            _this4.api.validateResponse(response, function (data) {
+              _this4.funds = data;
+            }, function (error) {
+              _this4.bot.fail(error);
+            });
+          });
+        }
+      }, {
+        key: "validateAndAdd",
+        value: function validateAndAdd() {
+          if (this.form.get('amount').value == "") this.bot.fail("Please enter a valid amount !");else if (this.form.get('remarks').value == "") this.bot.fail("Please enter a valid remarks !");else if (this.form.get('reason').value == "") this.bot.fail("Please enter a valid reason !");else this.addFundsRaiser();
+        }
+      }, {
+        key: "addFundsRaiser",
+        value: function addFundsRaiser() {
+          var _this5 = this;
+
+          var funds = this.form.value;
+          funds.deposit = true;
+          this.loader.load();
+          this.api.addFundRaiser(funds).subscribe(function (response) {
+            _this5.loader.resume();
+
+            _this5.api.validateResponse(response, function (data) {
+              _this5.funds.push(data);
+
+              _this5.form.reset();
+
+              _this5.bot.success("Funds Added!");
+            }, function (error) {
+              _this5.bot.fail(error);
+            });
+          });
+        }
+      }]);
+
+      return FundRaiserComponent;
+    }();
+
+    FundRaiserComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]
+      }, {
+        type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__["BotService"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__["LoaderComponent"], {
+      "static": true
+    })], FundRaiserComponent.prototype, "loader", void 0);
+    FundRaiserComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-fund-raiser',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./fund-raiser.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/fund-raiser/fund-raiser.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./fund-raiser.component.css */
+      "./src/app/dashboard/fund-raiser/fund-raiser.component.css"))["default"]]
+    })], FundRaiserComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/dashboard/funds/funds.component.css":
+  /*!*****************************************************!*\
+    !*** ./src/app/dashboard/funds/funds.component.css ***!
+    \*****************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDashboardFundsFundsComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9mdW5kcy9mdW5kcy5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/dashboard/funds/funds.component.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/dashboard/funds/funds.component.ts ***!
+    \****************************************************/
+
+  /*! exports provided: FundsComponent */
+
+  /***/
+  function srcAppDashboardFundsFundsComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FundsComponent", function () {
+      return FundsComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/loader/loader.component */
+    "./src/app/loader/loader.component.ts");
+    /* harmony import */
+
+
+    var src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/api/api.service */
+    "./src/app/services/api/api.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/services/notification-bot/bot.service */
+    "./src/app/services/notification-bot/bot.service.ts");
+
+    var FundsComponent = /*#__PURE__*/function () {
+      function FundsComponent(formBuilder, api, bot) {
+        _classCallCheck(this, FundsComponent);
+
+        this.formBuilder = formBuilder;
+        this.api = api;
+        this.bot = bot;
+        this.funds = [];
+        this.form = this.formBuilder.group({
+          amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+        this.utForm = this.formBuilder.group({
+          amount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+          remarks: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+      }
+
+      _createClass(FundsComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.list();
+        }
+      }, {
+        key: "list",
+        value: function list() {
+          var _this6 = this;
+
+          this.loader.load();
+          this.api.listFunds().subscribe(function (response) {
+            _this6.loader.resume();
+
+            _this6.api.validateResponse(response, function (data) {
+              _this6.funds = data;
+            }, function (error) {
+              _this6.bot.fail(error);
+            });
+          });
+        }
+      }, {
+        key: "validateAndAdd",
+        value: function validateAndAdd() {
+          if (this.form.get('amount').value == "") this.bot.fail("Please enter a valid amount !");else if (this.form.get('remarks').value == "") this.bot.fail("Please enter a valid remarks !");else if (this.form.get('name').value == "") this.bot.fail("Please enter a valid name !");else this.addFunds();
+        }
+      }, {
+        key: "validateAndUtilize",
+        value: function validateAndUtilize() {
+          if (this.utForm.get('amount').value == "") this.bot.fail("Please enter a valid amount !");else if (this.utForm.get('remarks').value == "") this.bot.fail("Please enter a valid remarks !");else if (this.utForm.get('name').value == "") this.bot.fail("Please enter a valid name !");else this.utilizeFunds();
+        }
+      }, {
+        key: "addFunds",
+        value: function addFunds() {
+          var _this7 = this;
+
+          var funds = this.form.value;
+          funds.deposit = true;
+          this.loader.load();
+          this.api.addFunds(funds).subscribe(function (response) {
+            _this7.loader.resume();
+
+            _this7.api.validateResponse(response, function (data) {
+              _this7.funds.push(data);
+
+              _this7.form.reset();
+
+              _this7.bot.success("Funds Added!");
+            }, function (error) {
+              _this7.bot.fail(error);
+            });
+          });
+        }
+      }, {
+        key: "utilizeFunds",
+        value: function utilizeFunds() {
+          var _this8 = this;
+
+          var funds = this.utForm.value;
+          funds.deposit = false;
+          this.loader.load();
+          this.api.addFunds(funds).subscribe(function (response) {
+            _this8.loader.resume();
+
+            _this8.api.validateResponse(response, function (data) {
+              _this8.funds.push(data);
+
+              _this8.utForm.reset();
+
+              _this8.bot.success("Funds Utilized!");
+            }, function (error) {
+              _this8.bot.fail(error);
+            });
+          });
+        }
+      }]);
+
+      return FundsComponent;
+    }();
+
+    FundsComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_services_api_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]
+      }, {
+        type: src_app_services_notification_bot_bot_service__WEBPACK_IMPORTED_MODULE_5__["BotService"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_loader_loader_component__WEBPACK_IMPORTED_MODULE_3__["LoaderComponent"], {
+      "static": true
+    })], FundsComponent.prototype, "loader", void 0);
+    FundsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-funds',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./funds.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/funds/funds.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./funds.component.css */
+      "./src/app/dashboard/funds/funds.component.css"))["default"]]
+    })], FundsComponent);
     /***/
   },
 
@@ -1637,37 +2059,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "load",
         value: function load() {
-          var _this4 = this;
+          var _this9 = this;
 
           this.loader.load();
           this.api.listBookings(this.pageNumber, this.pageSize, this.sortBy, this.sortDirection).subscribe(function (response) {
-            _this4.loader.resume();
+            _this9.loader.resume();
 
-            _this4.api.validateResponse(response, function (data) {
-              _this4.page.numberOfElements = data.numberOfElements;
-              _this4.page.totalPages = data.totalPages;
-              _this4.page.totalElements = data.totalElements;
-              _this4.bookings = data.content;
+            _this9.api.validateResponse(response, function (data) {
+              _this9.page.numberOfElements = data.numberOfElements;
+              _this9.page.totalPages = data.totalPages;
+              _this9.page.totalElements = data.totalElements;
+              _this9.bookings = data.content;
             }, function (error) {
-              _this4.bot.fail(error);
+              _this9.bot.fail(error);
             });
           });
         }
       }, {
         key: "cancel",
         value: function cancel(id) {
-          var _this5 = this;
+          var _this10 = this;
 
           this.loader.load();
           this.api.cancel(id).subscribe(function (response) {
-            _this5.loader.resume();
+            _this10.loader.resume();
 
-            _this5.api.validateResponse(response, function (data) {
-              _this5.bot.success("Booking Cancelled !");
+            _this10.api.validateResponse(response, function (data) {
+              _this10.bot.success("Booking Cancelled !");
 
-              _this5.load();
+              _this10.load();
             }, function (error) {
-              _this5.bot.fail(error);
+              _this10.bot.fail(error);
             });
           });
         }
@@ -1791,39 +2213,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ProfileComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this6 = this;
+          var _this11 = this;
 
           this.api.getUser().subscribe(function (data) {
-            _this6.loader.resume();
+            _this11.loader.resume();
 
-            _this6.user = data;
+            _this11.user = data;
           }, function (error) {
-            _this6.loader.resume();
+            _this11.loader.resume();
 
-            _this6.bot.fail(_this6.msg.show(error.error.status));
+            _this11.bot.fail(_this11.msg.show(error.error.status));
           });
         }
       }, {
         key: "changePassword",
         value: function changePassword() {
-          var _this7 = this;
+          var _this12 = this;
 
           if (this.cPass == this.pass && this.pass != "" && this.oldPass != "") {
             this.loader.load();
             this.api.updatePassword(this.pass, this.oldPass).subscribe(function (data) {
-              _this7.pass = "";
-              _this7.cPass = "";
+              _this12.pass = "";
+              _this12.cPass = "";
 
-              _this7.loader.resume();
+              _this12.loader.resume();
 
-              _this7.bot.success("Password Changed Successfully !");
+              _this12.bot.success("Password Changed Successfully !");
             }, function (error) {
-              _this7.pass = "";
-              _this7.cPass = "";
+              _this12.pass = "";
+              _this12.cPass = "";
 
-              _this7.loader.resume();
+              _this12.loader.resume();
 
-              _this7.bot.fail(_this7.msg.show(error.error.status));
+              _this12.bot.fail(_this12.msg.show(error.error.status));
             });
           } else if (this.pass == "") {
             this.bot.fail("Password cannot be blank");
@@ -1949,26 +2371,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "list",
         value: function list() {
-          var _this8 = this;
+          var _this13 = this;
 
           this.loader.load();
           this.api.listRooms(this.fromDate, this.toDate).subscribe(function (response) {
-            _this8.persistedFromDate = _this8.fromDate;
-            _this8.persistedToDate = _this8.toDate;
+            _this13.persistedFromDate = _this13.fromDate;
+            _this13.persistedToDate = _this13.toDate;
 
-            _this8.loader.resume();
+            _this13.loader.resume();
 
-            _this8.api.validateResponse(response, function (data) {
-              _this8.rooms = data;
+            _this13.api.validateResponse(response, function (data) {
+              _this13.rooms = data;
             }, function (error) {
-              _this8.bot.fail(error);
+              _this13.bot.fail(error);
             });
           });
         }
       }, {
         key: "book",
         value: function book(id) {
-          var _this9 = this;
+          var _this14 = this;
 
           var booking = {};
           var room = {};
@@ -1978,14 +2400,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           booking.room = room;
           this.loader.load();
           this.api.book(booking).subscribe(function (response) {
-            _this9.loader.resume();
+            _this14.loader.resume();
 
-            _this9.api.validateResponse(response, function (data) {
-              _this9.rooms = _this9.rooms.filter(function (room) {
+            _this14.api.validateResponse(response, function (data) {
+              _this14.rooms = _this14.rooms.filter(function (room) {
                 return room.roomId != id;
               });
             }, function (error) {
-              return _this9.bot.fail(error);
+              return _this14.bot.fail(error);
             });
           });
         }
@@ -2343,26 +2765,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "login",
         value: function login() {
-          var _this10 = this;
+          var _this15 = this;
 
           this.loader.load();
           this.api.login(this.form.value).subscribe(function (response) {
-            _this10.api.validateResponse(response, function (data) {
-              _this10.loader.resume();
+            _this15.api.validateResponse(response, function (data) {
+              _this15.loader.resume();
 
-              if (_this10.remember) {
-                localStorage.setItem("savedUser", _this10.form.get("username").value);
-                localStorage.setItem("savedPassword", _this10.form.get("password").value);
+              if (_this15.remember) {
+                localStorage.setItem("savedUser", _this15.form.get("username").value);
+                localStorage.setItem("savedPassword", _this15.form.get("password").value);
               }
 
               localStorage.setItem('currentToken', data.token);
               localStorage.setItem('currentRole', data.user.role);
 
-              _this10.router.navigateByUrl("/");
+              _this15.router.navigateByUrl("/");
             }, function (error) {
-              _this10.loader.resume();
+              _this15.loader.resume();
 
-              _this10.bot.fail(error);
+              _this15.bot.fail(error);
             });
           });
         }
@@ -2382,13 +2804,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "resetPassword",
         value: function resetPassword() {
-          var _this11 = this;
+          var _this16 = this;
 
           if (this.username == "") this.bot.fail("Please enter a username first !");else {
             this.api.forgot(this.username).subscribe(function (data) {
-              _this11.bot.alert("The reset link has been sent to your registered e-mail !");
+              _this16.bot.alert("The reset link has been sent to your registered e-mail !");
             }, function (error) {
-              _this11.bot.fail(_this11.msg.show(error.error.status));
+              _this16.bot.fail(_this16.msg.show(error.error.status));
             });
           }
         }
@@ -2583,26 +3005,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "signUp",
         value: function signUp() {
-          var _this12 = this;
+          var _this17 = this;
 
           this.loader.load();
           this.api.signUp(this.form.value).subscribe(function (response) {
-            _this12.api.validateResponse(response, function (data) {
-              _this12.loader.resume();
+            _this17.api.validateResponse(response, function (data) {
+              _this17.loader.resume();
 
-              if (_this12.remember) {
-                localStorage.setItem("savedUser", _this12.form.get("username").value);
-                localStorage.setItem("savedPassword", _this12.form.get("password").value);
+              if (_this17.remember) {
+                localStorage.setItem("savedUser", _this17.form.get("username").value);
+                localStorage.setItem("savedPassword", _this17.form.get("password").value);
               }
 
               localStorage.setItem('currentToken', data.token);
               localStorage.setItem('currentRole', data.user.role);
 
-              _this12.router.navigateByUrl("/");
+              _this17.router.navigateByUrl("/");
             }, function (error) {
-              _this12.loader.resume();
+              _this17.loader.resume();
 
-              _this12.bot.fail(error);
+              _this17.bot.fail(error);
             });
           });
         }
@@ -2622,13 +3044,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "resetPassword",
         value: function resetPassword() {
-          var _this13 = this;
+          var _this18 = this;
 
           if (this.username == "") this.bot.fail("Please enter a username first !");else {
             this.api.forgot(this.username).subscribe(function (data) {
-              _this13.bot.alert("The reset link has been sent to your registered e-mail !");
+              _this18.bot.alert("The reset link has been sent to your registered e-mail !");
             }, function (error) {
-              _this13.bot.fail(_this13.msg.show(error.error.status));
+              _this18.bot.fail(_this18.msg.show(error.error.status));
             });
           }
         }
@@ -2754,7 +3176,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ResetComponent = /*#__PURE__*/function () {
       function ResetComponent(bot, msg, api, route) {
-        var _this14 = this;
+        var _this19 = this;
 
         _classCallCheck(this, ResetComponent);
 
@@ -2766,7 +3188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.confirmPassword = "";
         this.showPass = false;
         this.route.params.subscribe(function (val) {
-          _this14.token = _this14.route.snapshot.paramMap.get("token");
+          _this19.token = _this19.route.snapshot.paramMap.get("token");
         });
       }
 
@@ -2781,13 +3203,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "changePassword",
         value: function changePassword() {
-          var _this15 = this;
+          var _this20 = this;
 
           if (this.password != "" && this.confirmPassword == this.password) {
             this.api.reset(this.password, this.token).subscribe(function (data) {
-              _this15.bot.success("Password has been changed successfully !");
+              _this20.bot.success("Password has been changed successfully !");
             }, function (error) {
-              _this15.bot.fail(_this15.msg.show(error.error.status));
+              _this20.bot.fail(_this20.msg.show(error.error.status));
             });
           } else if (this.password == "") this.bot.fail("Password cannot be blank");else this.bot.fail("Password should be same in both the fields !");
         }
@@ -2878,6 +3300,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.SIGNUP_URL = this.HOST + "/signUp";
         this.LOOKUP_URL = this.HOST + "/lookup";
         this.PROFILE_URL = this.SECURE + "/profile";
+        this.FUNDS_URL = this.SECURE + "/funds";
+        this.FUND_RAISER_URL = this.FUNDS_URL + "/raiser";
         this.BOOKING_URL = this.SECURE + "/booking";
         this.ROOM_URL = this.SECURE + "/room";
         this.FORGOT_URL = this.HOST + "/public/forgot";
@@ -2885,6 +3309,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(ApiService, [{
+        key: "addFunds",
+        value: function addFunds(funds) {
+          return this.http.post(this.FUNDS_URL, funds);
+        }
+      }, {
+        key: "addFundRaiser",
+        value: function addFundRaiser(fundRaiser) {
+          return this.http.post(this.FUND_RAISER_URL, fundRaiser);
+        }
+      }, {
+        key: "listFunds",
+        value: function listFunds() {
+          return this.http.get(this.FUNDS_URL);
+        }
+      }, {
+        key: "listFundRaisers",
+        value: function listFundRaisers() {
+          return this.http.get(this.FUND_RAISER_URL);
+        }
+      }, {
         key: "book",
         value: function book(booking) {
           return this.http.post(this.BOOKING_URL, booking);
@@ -3317,7 +3761,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(TpInterceptorServicer, [{
         key: "intercept",
         value: function intercept(request, next) {
-          var _this16 = this;
+          var _this21 = this;
 
           var token = window.localStorage.getItem("currentToken");
 
@@ -3336,7 +3780,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (error.status == 401) {
                 localStorage.setItem("currentToken", undefined);
 
-                _this16.router.navigateByUrl("/login");
+                _this21.router.navigateByUrl("/login");
               }
             }
           }));

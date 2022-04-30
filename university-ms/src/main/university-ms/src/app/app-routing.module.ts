@@ -10,6 +10,8 @@ import { BookingComponent } from './dashboard/booking/booking.component';
 import { RoomComponent } from './dashboard/room/room.component';
 import { RegisterComponent } from './register/register.component';
 import { PaymentHistoryComponent } from './dashboard/payment-history/payment-history.component';
+import { FundsComponent } from './dashboard/funds/funds.component';
+import { FundRaiserComponent } from './dashboard/fund-raiser/fund-raiser.component';
 
 const routes: Routes = [{
   path: "",
@@ -18,17 +20,17 @@ const routes: Routes = [{
     path: "profile",
     component: ProfileComponent
   },{
-    path: "booking-history",
-    component: BookingComponent
+    path: "funds",
+    component: FundsComponent
   },{
-    path: "payment-history",
-    component: PaymentHistoryComponent
+    path: "raiser",
+    component: FundRaiserComponent
   }, {
     path: "room",
     component: RoomComponent
   },{
     path: "",
-    redirectTo: "/booking-history",
+    redirectTo: "/funds",
     pathMatch: "full"
   }],
   canActivate: [AuthGuardService]
