@@ -1,0 +1,22 @@
+echo "================================================================================================================================="
+
+echo "Building UI Assets...."
+cd /users/shadow/desktop/sandbox/university-ms/university-ms/src/main/university-ms
+
+ng build
+
+echo "--------------------------------------------------------------------------------------------------------------------------------"
+
+echo "Moving to Back-end library..."
+
+cd dist/university-ms
+
+mv index.html ./../../../resources/templates/index.html
+
+cd ../..
+
+cp -R ./dist/university-ms/ ./../resources/static
+
+echo "Cleaning unused files..."
+
+rm -rf dist
